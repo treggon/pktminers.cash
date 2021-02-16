@@ -16,7 +16,6 @@ const Saferphore /*:any*/ = require('saferphore'); // flow doesn't like how safe
 
 const Util = require('./Util.js');
 const Rpc = require('./Rpc.js');
-const { config } = require('bitcoind-rpc');
 
 // This script implements a simple pplns via a webserver
 // API:
@@ -105,9 +104,6 @@ export type PayMaker_Result_t = {|
         |},
     },
     result: { [string]: number },
-    poolFee: number,
-    blockMiners: number,
-    annMiners: number,
 |};
 type PayoutAnnStat_t = {|
     accepted: number,
@@ -155,8 +151,6 @@ export type PayMaker_Config_t = {
     historyDepth: number,
     annCompressor: AnnCompressorConfig_t,
     blockPayoutFraction: number,
-    poolFee?: number,
-    poolFeeAddress?: string,
     pplnsAnnConstantX: number,
     pplnsBlkConstantX: number,
     defaultAddress: string,
@@ -597,18 +591,7 @@ const computeWhoToPay = (ctx /*:Context_t*/, maxtime) => {
     }
     payoutsList.sort((x, y) => y[1] - x[1]);
     const payouts2 = {};
-    let poolFee = 0;
-    const poolFeeAddress = ctx.mut.cfg.poolFeeAddress || '';
-    if (!ctx.mut.cfg.poolFee) {
-    } else if (ctx.mut.cfg.poolFee >= 1 || ctx.mut.cfg.poolFee < 0) {
-        warn.push(`invalid poolFee ${ctx.mut.cfg.poolFee} must be between 0 and 1`);
-    } else if (!Util.isValidPayTo(poolFeeAddress)) {
-        warn.push(`invalid poolFeeAddress ${poolFeeAddress}`);
-    } else {
-        poolFee = ctx.mut.cfg.poolFee || 0;
-        payouts2[poolFeeAddress] = poolFee;
-    }
-    payoutsList.forEach((x) => payouts2[x[0]] = (payouts2[x[0]] || 0) + x[1] * (1 - poolFee));
+    payoutsList.forEach((x) => payouts2[x[0]] = (payouts2[x[0]] || 0) + x[1]);
 
     return ctx.mut.cfg.updateHook({
         error: [],
@@ -623,10 +606,7 @@ const computeWhoToPay = (ctx /*:Context_t*/, maxtime) => {
         lastWonBlockTime: ctx.mut.mostRecentBlockTime,
         annMinerStats,
         blkMinerStats,
-        result: payouts2,
-        poolFee,
-        blockMiners: ctx.mut.cfg.blockPayoutFraction * (1 - poolFee),
-        annMiners: (1 - ctx.mut.cfg.blockPayoutFraction) * (1 - poolFee),
+        result: payouts2
     });
 };
 

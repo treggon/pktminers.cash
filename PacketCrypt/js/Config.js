@@ -15,8 +15,9 @@ import type { PayMaker_Config_t } from './PayMaker.js'
 export type Config_t = {
     masterUrl: string,
     rootWorkdir: string,
-    privateSeed: string|null,
+    privateSeed: string,
     paymakerHttpPasswd: string,
+    checkannsPath: string,
     annHandlers: Array<AnnHandler_Config_t>,
     blkHandlers: Array<BlkHandler_Config_t>,
     master: Master_Config_t,

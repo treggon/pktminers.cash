@@ -5,23 +5,24 @@ Pool consists of everything needed to support miners of PacketCrypt announcement
 ## How it works
 
 In order to take advantage of commodity high performance caching web servers, pool operates entirely
-on top of http. There are 3 component classes: **Master**, **AnnHandler**, **BlkHandler**, and
-**PayMaker**. There can only be one **Master** and **PayMaker** but there can be as many **AnnHandler**
-and **BlkHandler** nodes as you want.
+on top of http. There are 3 component classes: **Master**, **AnnHandler** and **BlkHandler**, there
+can only be one **Master** but there can be as many **AnnHandler** and **BlkHandler** nodes as you
+want.
 
 ## Master
 
-The **Master** must have a connection to pktd in order to get the block headers and transactions for
+The **Master** must have a connection to btcd in order to get the block headers and transactions for
 making a work object. As there is only one **Master**, scalability requires that it must not do much
 work. Miners can only make `GET` requests to the **Master** for work items which are the same for
-everyone, and thus cachable.
+everyone, and thus cachable. There is one POST request which is made to **Master** but it is made
+only by privileged **BlkHandler** nodes when they think that a share they processed is a valid block.
 
 ### Http Endpoints
 
 * `GET /config.json`: get global configuration for the pool (honor cache headers)
-* `GET /work_<n>.bin`: get a work entry (can cache forever)
-* `GET /work_<n+1>.bin`: longpoll (can cache forever once it returns an HTTP 200)
-* `GET /blkinfo_<hash>.json`: Get information about a block based on it's hash (can cache forever)
+* `GET /work_<n>`: get a work entry (can cache forever)
+* `GET /work_<n+1>`: longpoll (can cache forever once it returns an HTTP 200)
+* `POST /privileged/block`: limit requrests to this url to authorized **BlkHandler** nodes
 
 ## AnnHandler
 
@@ -30,37 +31,28 @@ announcements available for block miners to download. You can run as many of the
 note that every announcement miner will post files to all of them so there will be additional network
 traffic.
 
-**NOTE**: The AnnHandler is located in [packetcrypt_rs](https://github.com/cjdelisle/packetcrypt_rs)
-repository.
-
 ### Http Endpoints
 
 * `POST /submit`: upload an announcement (don't cache)
+* `GET /outdir/<unique name>.bin`: get the result from processing an announcement file (can cache forever)
 * `GET /anns/index.json`: number of the highest numbered ann file (honor cache headers)
-* `GET /anns/anns_<name>.bin`: batches of announcements, name is in index (can cache forever)
+* `GET /anns/anns_<n>.bin`: batches of announcements (can cache forever)
+* `GET /anns/anns_<n+1>.bin`: longpoll for next batch of announcements (can cache forever once it
+returns an HTTP 200)
 
 
 ## BlkHandler
-Like **AnnHandler**, the **BlkHandler** processes shares from block miners. When **BlkHandler**
-discovers a share which it thinks is good enough for a valid block, it will submit it as a block.
-The **BlkHandler** connects to a pktd instance in order to verify shares and to submit blocks.
+Like **AnnHandler**, the **BlkHandler** processes shares from block miners, again like **AnnHandler**,
+the **BlkHandler** need to filter duplicate shares and so block miners must post to every **BlkHandler**,
+however since the flow of shares will be smaller than the flow of announcements, **BlkHandler** can
+more easily scale horizontally. When **BlkHandler** discovers a share which it thinks is good enough
+for a valid block, it will post to the master url `/privileged/block`.
 
 ### Http Endpoints
 
-* `POST /submit`: upload a share
+* `POST /submit`: upload a share (don't cache)
+* `GET /outdir/<unique name>.bin`: get the result from processing a share (can cache forever)
 
-## PayMaker
-The **PayMaker** also connects to the pktd instance and it tells the pktd instance which addresses
-should be paid by the next block template. The **PayMaker** takes http posts from the **AnnHandler**
-and the **BlkHandler** and with information about announcements and block shares which were recently
-found by the miners.
-
-### Http Endpoints
-
-* `POST /events`: Upload a log of announcements or blocks which were found (protected by http
-password because anyone who can post to this can make the pool pay them arbitrary amounts of PKT)
-* `GET /stats`: Get some basic stats about memory usage on the **PayMaker**
-* `GET /whotopay`: Get information about the miners and who will get what percentage of the next block
 
 ## Configuring the pool
 Every part of the pool is configured in the same file so there is only one section on configuration.
@@ -69,16 +61,24 @@ pull the git repository without overwriting it.
 
 * **masterUrl**: Every component of the pool needs to know the URL of the master in order to get the
 updated configuration from it. This should be the public URL which clients will use.
-* **rootWorkdir**: This is the location where the particular worker (**Master**, **PayMaker** or
+* **rootWorkdir**: This is the location where the particular worker (**Master**, **AnnHandler** or
 **BlkHandler**) will store it's data, it can be different for each node in the pool.
-* **annHandlers**: These need to be specified in the pool so that the miners know where to find them,
-but they need to be configured separately using [packetcrypt_rs](https://github.com/cjdelisle/packetcrypt_rs).
-* **blkHandlers**: These are arrays of block handlers in the
-pool, this is used both on the **Master** and on the **BlkHandler** nodes themselves.
-  * **url**: This is the public URL of the **BlkHandler** node, used by the
-  **Master** to direct miners to the appropriate **BlkHandler** nodes and also
+* **checkannsPath**: The path to the
+[checkanns](https://github.com/cjdelisle/PacketCrypt/blob/master/docs/checkanns.md) executable which
+is used by **AnnHandler** to do the actual processing. This is read directly on the **AnnHandler**
+node.
+* **checksharesPath**: The path to the
+[checkshares](https://github.com/cjdelisle/PacketCrypt/blob/master/docs/checkshares.md) executable
+which is used by **BlkHandler** to do the actual processing. This is read directly on the
+**BlkHandler** node.
+* **annHandlers** and **blkHandlers**: These are arrays of announcement and block handlers in the
+pool, this is used both on the **Master** and on the **AnnHandler** nodes themselves.
+  * **url**: This is the public URL of the **AnnHandler** or **BlkHandler** node, used by the
+  **Master** to direct miners to the appropriate **AnnHandler** and **BlkHandler** nodes and also
   used by the individual nodes to identify themselves in the **Master** configuration.
-  * **port**: This is the port which will be bound internally by the **BlkHandler** node
+  * **port**: This is the port which will be bound internally by the **AnnHandler** node
+  * **threads**: This is the number of threads which the **AnnHandler** will use for processing
+  announcements.
   * **root**: The global config, so that it is accessible to the **AnnHandler** code, leave this
   alone.
 * **master**: This is the configuration for the master node
@@ -95,17 +95,21 @@ First, you'll need to follow the [install process](https://github.com/cjdelisle/
 then once you have successfully installed the executables, you can start launching processes:
 
 Then edit pool.js and setup your configuration, this is where you'll decide how many **AnnHandler**
-and **BlkHandler** nodes you should run. Note that AnnHandler is part of packetcrypt_rs and needs
-to be launched separately.
+and **BlkHandler** nodes you should run.
 
 Launch the master:
 
         node ./pool.js --master
+
+Launch the **AnnHandler** nodes, specify `--ann0` for the first **AnnHandler**, `--ann1` for the
+second, and so forth.
+
+        node ./pool.js --ann0
 
 Launch the **BlkHandler** nodes, specify `--blk0` for the first **BlkHandler**, `--blk1` for the
 second, and so forth.
 
         node ./pool.js --blk0
 
-The **PayMaker** and **BlkHandler** nodes will connect back to the **Master** (using the public
+The **AnnHandler** and **BlkHandler** nodes will connect back to the **Master** (using the public
 URL) and will begin accepting requests from miners.
