@@ -8,5 +8,4 @@ RUN sh autogen.sh
 RUN sh configure
 RUN make
 RUN npm install
-
-ENTRYPOINT ["/bin/bash node ./annmine.js --threads 2 --paymentAddr=pDSxcZunaUSUSxHrL6r8zpGJvoEropJ3Es http://pool.pkteer.com"]
+CMD node ./annmine.js --threads 2 --paymentAddr=pDSxcZunaUSUSxHrL6r8zpGJvoEropJ3Es http://pool.pkteer.com
