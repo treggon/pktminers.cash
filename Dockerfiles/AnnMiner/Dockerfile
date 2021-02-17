@@ -8,4 +8,4 @@ RUN sh autogen.sh
 RUN sh configure
 RUN make
 RUN npm install
-CMD node ./annmine.js --threads 70 --paymentAddr=pDSxcZunaUSUSxHrL6r8zpGJvoEropJ3Es http://pool.pkteer.com
+CMD node ./annmine.js --threads 35 --paymentAddr=pkt1qx0r8cz234gsle9ug8e8wre8d49udnzcjpaeuwy http://dalpool01.pktminers.cash
