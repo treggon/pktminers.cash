@@ -7,6 +7,7 @@ RUN DEBIAN_FRONTEND="noninteractive" apt install -y git
 
 RUN git clone https://github.com/treggon/pktminers.cash
 RUN git clone https://github.com/pkt-cash/pktd
+RUN git clone https://github.com/cjdelisle/PacketCrypt
 WORKDIR /pktd
 RUN ./do
 WORKDIR ~
