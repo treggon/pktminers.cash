@@ -14,4 +14,5 @@ RUN DEBIAN_FRONTEND="noninteractive" apt install -y npm
 RUN DEBIAN_FRONTEND="noninteractive" npm cache clean -f
 RUN DEBIAN_FRONTEND="noninteractive" npm install -g n
 RUN DEBIAN_FRONTEND="noninteractive" n stable
-RUN sh autogen.sh
+WORKDIR /PacketCrypt
+RUN DEBIAN_FRONTEND="noninteractive" npm install
