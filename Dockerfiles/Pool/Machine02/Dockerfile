@@ -13,7 +13,7 @@ RUN git clone https://github.com/treggon/pktminers.cash
 RUN git clone https://github.com/cjdelisle/packetcrypt_rs
 
 # Clone the stuff we will need
-RUN DEBIAN_FRONTEND="noninteractive" curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh | "1"
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 #RUN DEBIAN_FRONTEND="noninteractive" apt install -y paymaker
 
 
