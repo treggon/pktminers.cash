@@ -32,7 +32,7 @@ RUN DEBIAN_FRONTEND="noninteractive" apt-get update
 RUN DEBIAN_FRONTEND="noninteractive" apt install -y nginx
 RUN DEBIAN_FRONTEND="noninteractive" unlink /etc/nginx/sites-enabled/default
 WORKDIR /etc/nginx/sites-available
-COPY reverse-proxy.conf /etc/nginx/sites-available
+ADD reverse-proxy.conf /etc/nginx/sites-available
 RUN DEBIAN_FRONTEND="noninteractive" ln -s /etc/nginx/sites-available/reverse-proxy.conf /etc/nginx/sites-enabled/reverse-proxy.conf
 RUN DEBIAN_FRONTEND="noninteractive" rm default
 RUN DEBIAN_FRONTEND="noninteractive" nginx -t
