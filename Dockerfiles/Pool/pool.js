@@ -36,7 +36,7 @@ config.paymakerHttpPasswd = '0dc8eff1-d3ba-4b12-97b6-3e145944533e-2158e8a8-ee9f-
 
 // Master URL as it is externally visible
 //config.masterUrl = 'http://pool.cjdns.fr/ng_master';
-config.masterUrl = 'http://dal34.pktminers.cash:8080';
+config.masterUrl = 'http://dal034.pktminers.cash:8080';
 
 // Path to the pool datastore
 config.rootWorkdir = './datastore/pool';
@@ -59,7 +59,7 @@ config.annHandlers = [
     {
         // What address should be advertized for accessing this ann handler (external address)
         //url:'http://pool.cjdns.fr/ng_ann0',
-        url: 'http://dal35.pktminers.cash:8081',
+        url: 'http://dal035.pktminers.cash:8081',
 
         // What port to bind this ann handler on
         port: 8081,
@@ -80,7 +80,7 @@ config.blkHandlers = [
     {
         // What address should be advertized for accessing this block handler (external address)
         //url: 'http://pool.cjdns.fr/ng_blk0',
-        url: 'http://dal35.pktminers.cash:8082',
+        url: 'http://dal035.pktminers.cash:8082',
 
         // Which port to run this block handler on
         port: 8082,
@@ -142,7 +142,7 @@ config.tracker = {
 // Paymaker config
 config.payMaker = {
     // How the miners should access the paymaker (external address)
-    url: 'http://dal34.pktminers.cash:8083',
+    url: 'http://dal034.pktminers.cash:8083',
 
     // Which port to run the paymaker on
     port: 8083,
