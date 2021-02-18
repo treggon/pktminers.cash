@@ -38,4 +38,5 @@ RUN DEBIAN_FRONTEND="noninteractive" ln -s /etc/nginx/sites-available/reverse-pr
 RUN DEBIAN_FRONTEND="noninteractive" rm default
 RUN DEBIAN_FRONTEND="noninteractive" nginx -t
 RUN DEBIAN_FRONTEND="noninteractive" systemctl reload nginx
-WORKDIR /
+WORKDIR /pktd
+RUN ./bin/pktd &
