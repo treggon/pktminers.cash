@@ -13,10 +13,8 @@ RUN git clone https://github.com/treggon/pktminers.cash
 RUN git clone https://github.com/cjdelisle/packetcrypt_rs
 
 # Clone the stuff we will need
-RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+#RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 #RUN DEBIAN_FRONTEND="noninteractive" apt install -y paymaker
-
-
 # Install PKTD
 #WORKDIR /packetcrypt_rs
 #RUN DEBIAN_FRONTEND="noninteractive" ~/.cargo/bin/cargo build --release --features jemalloc
