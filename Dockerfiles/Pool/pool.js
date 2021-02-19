@@ -36,7 +36,7 @@ config.paymakerHttpPasswd = '0dc8eff1-d3ba-4b12-97b6-3e145944533e-2158e8a8-ee9f-
 
 // Master URL as it is externally visible
 //config.masterUrl = 'http://pool.cjdns.fr/ng_master';
-config.masterUrl = 'http://dal034.pktminers.cash:8080';
+config.masterUrl = 'http://dal034.pktminers.cash';
 
 // Path to the pool datastore
 config.rootWorkdir = './datastore/pool';
@@ -49,7 +49,7 @@ config.rpc = {
     protocol: 'http',
     user: 'rpcuser',
     pass: '0dc8eff1-d3ba-4b12-97b6-3e145944533e-2158e8a8-ee9f-4a65-89d4-633cc1e7bb47',
-    host: '127.0.0.1',
+    host: 'localhost',
     port: 64765,
     rejectUnauthorized: false
 };
@@ -59,10 +59,10 @@ config.annHandlers = [
     {
         // What address should be advertized for accessing this ann handler (external address)
         //url:'http://pool.cjdns.fr/ng_ann0',
-        url: 'http://dal034.pktminers.cash:8081',
+        url: 'http://dal034.pktminers.cash:8201',
 
         // What port to bind this ann handler on
-        port: 8081,
+        port: 8201,
 
         // Number of threads to use in the checkanns process
         threads: 40,
@@ -77,13 +77,13 @@ config.blkHandlers = [
     {
         // What address should be advertized for accessing this block handler (external address)
         //url: 'http://pool.cjdns.fr/ng_blk0',
-        url: 'http://dal034.pktminers.cash:8082',
+        url: 'http://dal034.pktminers.cash:8100',
 
         // Which port to run this block handler on
-        port: 8082,
+        port: 8100,
 
         // What address to bind to, set to localhost if proxying
-        host: 'localhost',
+        host: 'http://dal034.pktminers.cash',
 
         root: config
     },
@@ -92,10 +92,10 @@ config.blkHandlers = [
 // Master config
 config.master = {
     // Which port to run the master on
-    port: 80,
+    port: 8080,
 
     // What address to bind to, set to localhost if proxying
-    host: 'localhost',
+    host: 'http://dal034.pktminers.cash',
 
     // Minimum work for an announcement
     // This number is effectively a bandwidth divisor, every time you
@@ -122,13 +122,13 @@ config.master = {
 // Paymaker config
 config.payMaker = {
     // How the miners should access the paymaker (external address)
-    url: 'http://dal034.pktminers.cash:8083',
+    url: 'http://dal034.pktminers.cash:8081',
 
     // Which port to run the paymaker on
-    port: 8083,
+    port: 8081,
 
     // What address to bind to, set to localhost if proxying
-    host: 'localhost',
+    host: 'http://dal034.pktminers.cash',
 
     // Seconds between sending updates to pktd
     // If this set to zero, the payMaker will accept log uploads but will
