@@ -11,4 +11,5 @@ RUN make
 RUN npm install
 WORKDIR /packetcrypt_rs
 RUN curl https://sh.rustup.rs -sSf | sh -s -- --default-toolchain none
+RUN cargo build --release
 #CMD node ./blkmine.js --threads 35 --paymentAddr=pkt1qx0r8cz234gsle9ug8e8wre8d49udnzcjpaeuwy http://dalpool01.pktminers.cash
