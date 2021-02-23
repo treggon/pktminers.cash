@@ -197,4 +197,3 @@ const main = (argv, config) => {
         " " + config.blkHandlers.length + " block validators which must be launched");
 };
 main(process.argv, config);
-                               
