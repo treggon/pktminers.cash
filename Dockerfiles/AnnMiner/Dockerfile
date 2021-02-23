@@ -13,5 +13,5 @@ WORKDIR /packetcrypt_rs
 RUN curl https://sh.rustup.rs -sSf --no-modify-path none | sh -s
 RUN DEBIAN_FRONTEND="noninteractive" apt-get install -y cargo
 RUN cargo build --release
-ADD https://raw.githubusercontent.com/treggon/pktminers.cash/Dockerfiles/AnnMiner/DoWork.js /packetcrypt_rs
+ADD https://raw.githubusercontent.com/treggon/pkt/master/dowork.sh?token=ABMX2JZOJYFCSPQ6IBBJVH3AGRPW4 /packetcrypt_rs
 #CMD node ./blkmine.js --threads 35 --paymentAddr=pkt1qx0r8cz234gsle9ug8e8wre8d49udnzcjpaeuwy http://dalpool01.pktminers.cash
