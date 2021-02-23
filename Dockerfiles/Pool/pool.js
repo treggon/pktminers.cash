@@ -12,20 +12,17 @@ const BlkHandler = require('./js/BlkHandler.js');
 const Util = require('./js/Util.js');
 
 /*::
-import type { Master_Config_t } from './js/Master.js'
-import type { AnnHandler_Config_t } from './js/AnnHandler.js'
-import type { BlkHandler_Config_t } from './js/BlkHandler.js'
-import type { Config_t } from './js/Config.js'
 import type { PayMaker_Result_t } from './js/PayMaker.js'
 */
 
 const config = {};
 
 // This seed is used for deriving keys which will be used for signing announcements.
-// Each round of work has a different key which is derived from this seed. If you use a weak
-// seed then one announcement signing key can be used to guess the seed.
-// If the seed is known, other pools can steal your announcements and use them.
-config.privateSeed = "9fb309e0-9c89-4f39-9e3f-7931f7d2e115-07395401-e11d-4e87-b1a7-7d7a68317b39";
+// Announcement signing is one way to prevent other pools from stealing your announcements
+// but it also prevents multi-pool mining.
+// Unless you have a good reason to use this, you should use block_miner_passwd on the
+// ann handler config instead.
+config.privateSeed = null;
 
 // Anyone who has this password can make http posts to the paymaker (claim that shares were won)
 // You should make this random and also firewall the paymaker from the public.
@@ -35,21 +32,18 @@ config.privateSeed = "9fb309e0-9c89-4f39-9e3f-7931f7d2e115-07395401-e11d-4e87-b1
 config.paymakerHttpPasswd = '0dc8eff1-d3ba-4b12-97b6-3e145944533e-2158e8a8-ee9f-4a65-89d4-633cc1e7bb47';
 
 // Master URL as it is externally visible
-//config.masterUrl = 'http://pool.cjdns.fr/ng_master';
-config.masterUrl = 'http://dal034.pktminers.cash';
+// This is used by the PayMaker and the BlockHandler
+config.masterUrl = 'http://dalpool01.pktminers.cash';
 
 // Path to the pool datastore
 config.rootWorkdir = './datastore/pool';
-
-// Path to the checkanns binary
-config.checkannsPath = './bin/checkanns';
 
 // pktd RPC connection info
 config.rpc = {
     protocol: 'http',
     user: 'rpcuser',
     pass: '0dc8eff1-d3ba-4b12-97b6-3e145944533e-2158e8a8-ee9f-4a65-89d4-633cc1e7bb47',
-    host: 'localhost',
+    host: '127.0.0.1',
     port: 64765,
     rejectUnauthorized: false
 };
@@ -58,16 +52,8 @@ config.rpc = {
 config.annHandlers = [
     {
         // What address should be advertized for accessing this ann handler (external address)
-        //url:'http://pool.cjdns.fr/ng_ann0',
-        url: 'http://dal034.pktminers.cash:8201',
-
-        // What port to bind this ann handler on
-        port: 8201,
-
-        // Number of threads to use in the checkanns process
-        threads: 40,
-
-        root: config
+        // You will also need to configure the handler itself in packetcrypt_rs
+        url: 'http://ann02.pktminers.cash:8082',
     },
 ];
 
@@ -77,13 +63,16 @@ config.blkHandlers = [
     {
         // What address should be advertized for accessing this block handler (external address)
         //url: 'http://pool.cjdns.fr/ng_blk0',
-        url: 'http://dal034.pktminers.cash:8100',
+        url: 'http://blk01.pktminers.cash:8082',
 
         // Which port to run this block handler on
-        port: 8100,
+        port: 8082,
 
         // What address to bind to, set to localhost if proxying
-        host: 'http://dal034.pktminers.cash',
+        host: '::',
+
+        // Maximum number of simultanious connections to accept before sending 500 errors
+        maxConnections: 50,
 
         root: config
     },
@@ -95,7 +84,7 @@ config.master = {
     port: 8080,
 
     // What address to bind to, set to localhost if proxying
-    host: 'http://dal034.pktminers.cash',
+    host: '::',
 
     // Minimum work for an announcement
     // This number is effectively a bandwidth divisor, every time you
@@ -105,7 +94,7 @@ config.master = {
     // Average number of shares per block, reducing this number will reduce
     // load on your block handlers, but increasing it will allow payment
     // to be spread more evenly between block miners.
-    shareWorkDivisor: 8,
+    shareWorkDivisor: 4,
 
     // Which versions of announcements we will accept
     annVersions: [1],
@@ -114,7 +103,7 @@ config.master = {
     // Fresh new announcements are not usable until they are 2 blocks old, putting
     // a 3 here will make announcement miners mine announcements which are immediately
     // usable.
-    mineOldAnns: 1,
+    mineOldAnns: 2,
 
     root: config,
 };
@@ -122,13 +111,13 @@ config.master = {
 // Paymaker config
 config.payMaker = {
     // How the miners should access the paymaker (external address)
-    url: 'http://dal034.pktminers.cash:8081',
+    url: 'http://paymaker.pktminers.cash',
 
     // Which port to run the paymaker on
-    port: 8081,
+    port: 8083,
 
     // What address to bind to, set to localhost if proxying
-    host: 'http://dal034.pktminers.cash',
+    host: '::',
 
     // Seconds between sending updates to pktd
     // If this set to zero, the payMaker will accept log uploads but will
@@ -137,33 +126,47 @@ config.payMaker = {
     updateCycle: 120,
 
     // How many seconds backward to keep history in memory
-    historyDepth: 60 * 60 * 24 * 30,
+    historyDepth: 60 * 60 * 24 * 2,
+
+    // Maximum number of simultanious connections to accept before sending 500 errors
+    maxConnections: 200,
 
     annCompressor: {
         // Store data in 1 minute aggregations
         timespanMs: 1000 * 60,
 
         // Allow data to be submitted to any of the last 10 aggregations
-        slotsToKeepEvents: 60,
+        slotsToKeepEvents: 10,
     },
 
     // What fraction of the payout to pay to block miners (the rest will be paid to ann miners)
     blockPayoutFraction: 0.5,
 
+    // What percent of the total winnings should be taken for pool management
+    poolFee: 0.20,
+
+    // The address which should be paid the pool fee
+    poolFeeAddress: "pkt1qrfndt6fklnkslkqzwv3gmdmhj9xtatp4gr2479",
+
     // This constant will affect how far back into history we pay our announcement miners
     pplnsAnnConstantX: 0.125,
 
     // This constant will affect how far back into history we pay our block miners
-    pplnsBlkConstantX: 0.125,
+    pplnsBlkConstantX: 2,
 
     // When there are not enough shares to fairly spread out the winnings,
     // pay what's left over to this address.
-    defaultAddress: "pkt1qn8xat2f8gcv4w2mcqnzxrdq3r5vkp7fswgr2x9",
+    defaultAddress: "pkt1qrfndt6fklnkslkqzwv3gmdmhj9xtatp4gr2479",
 
     // When something goes wrong, direct pktd to send all coins here, if this is different
     // from the defaultAddress then it is possible to account for and pay out to the miners
     // later when the problem is fixed.
-    errorAddress: "pkt1qn8xat2f8gcv4w2mcqnzxrdq3r5vkp7fswgr2x9",
+    errorAddress: "pkt1qrfndt6fklnkslkqzwv3gmdmhj9xtatp4gr2479",
+
+    // When something goes wrong, direct pktd to send all coins here, if this is different
+    // from the defaultAddress then it is possible to account for and pay out to the miners
+    // later when the problem is fixed.
+    errorAddress: "pkt1qrfndt6fklnkslkqzwv3gmdmhj9xtatp4gr2479",
 
     // A function which pre-treats updates before they're sent to pktd
     updateHook: (x /*:PayMaker_Result_t*/) => {
@@ -180,10 +183,6 @@ const main = (argv, config) => {
     if (argv.indexOf('--payMaker') > -1) {
         return void PayMaker.create(config.payMaker);
     }
-    for (let i = 0; i < config.annHandlers.length; i++) {
-        if (argv.indexOf('--ann' + i) === -1) { continue; }
-        return void AnnHandler.create(config.annHandlers[i]);
-    }
     for (let i = 0; i < config.blkHandlers.length; i++) {
         if (argv.indexOf('--blk' + i) === -1) { continue; }
         return void BlkHandler.create(config.blkHandlers[i]);
@@ -193,12 +192,9 @@ const main = (argv, config) => {
     console.log("    --master     # launch the master node");
     console.log("    --payMaker   # launch the paymaker on the master node server");
     console.log();
-    console.log("    --ann<n>     # launch an announcement validator node");
     console.log("    --blk<n>     # launch a block validator node");
     console.log("    NOTE: There are " + config.annHandlers.length + " announcement validators and" +
         " " + config.blkHandlers.length + " block validators which must be launched");
 };
 main(process.argv, config);
-
-config.payMaker.defaultAddress = 'pkt1qn8xat2f8gcv4w2mcqnzxrdq3r5vkp7fswgr2x9';
-config.payMaker.errorAddress = 'pkt1qn8xat2f8gcv4w2mcqnzxrdq3r5vkp7fswgr2x9';
+                               
