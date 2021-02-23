@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t treggon/annminer:1.0.0 -t treggon/annminer:latest -f AnnMiner/Dockerfile .
+docker build --no-cache -t treggon/annminer:1.0.0 -t treggon/annminer:latest -f AnnMiner/Dockerfile .
