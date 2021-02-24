@@ -23,12 +23,12 @@ root_workdir = "./datastore/pool"
     skip_check_chance = 0.5
 
     # Number of worker threads
-    num_workers = 8
+    num_workers = 60
 
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
-    # is in fact overloaded
-    input_queue_len = 256
+    # is in fact overloaded #256 default
+    input_queue_len = 128
 
     # The public URL of this ann handler
     public_url = "http://ann02.pktminers.cash:8203/submit"
