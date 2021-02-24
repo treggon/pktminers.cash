@@ -1,0 +1,42 @@
+# Password used by your paymaker to post logs for payment
+paymaker_http_password = "0dc8eff1-d3ba-4b12-97b6-3e145944533e-2158e8a8-ee9f-4a65-89d4-633cc1e7bb47"
+
+# URL of the pool master, used for getting configuration and work
+master_url = "http://dalpool01.pktminers.cash"
+
+# Store the data here
+root_workdir = "./datastore/pool"
+
+# You can have multiple announcement handlers defined in the same conf file
+# You select the one you want using the command line, for example:
+# packetcrypt ah --config /path/to/config.toml ah0
+[ann_handler.ah0]
+    # This is an optional password, if specified then no block miners will be
+    # able to use this handler unless they are using the same password on their
+    # command line using the -P or --handlerpass flag
+    # This will help prevent free-loader pools which pull announcements from
+    # your handlers but don't remunerate the announcement miners.
+    #block_miner_passwd = "you_can_put_a_secret_here"
+
+    # Randomly skip validation of some announcements to reduce CPU effort
+    # Set to 0 to check all announcements.
+    skip_check_chance = 0.5
+
+    # Number of worker threads
+    num_workers = 8
+
+    # Length of the input queue, keeping this low will create back-pressure
+    # and prevent miners from posting too many announcements when the server
+    # is in fact overloaded
+    input_queue_len = 256
+
+    # The public URL of this ann handler
+    public_url = "http://ann02.pktminers.cash:8203/submit"
+
+    # Bind to this port
+    # NOTE: To bind low ports with non-root user:
+    # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+    bind_port = 80
+
+    # Keep this many of the newest ann files
+    files_to_keep = 500
