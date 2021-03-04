@@ -27,3 +27,4 @@ RUN cd /pktminers.cash/PacketCrypt
 ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Miner/DoJSWork.sh /pktminers.cash/PacketCrypt
 
 RUN chmod +x /pktminers.cash/PacketCrypt/DoJSWork.sh
+WORKDIR /pktminers.cash/PacketCrypt
