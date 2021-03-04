@@ -15,12 +15,12 @@ do
         echo " About to nuke node"
         pkill -f ./target/release/packetcrypt
 
-        if $annthreads
+        if [ $annthreads ]
         then
             echo " Starting Announcement Miner"
             nice ./target/release/packetcrypt ann http://dalpool01.pktminers.cash/ --paymentaddr $paymentaddrfixed --threads $annthreads&
         fi
-        if $blockthreads
+        if [ $blockthreads ]
         then
             echo " Starting Packet Miner"
             nice ./target/release/packetcrypt blk http://dalpool01.pktminers.cash/ --memorysizemb 90000 --paymentaddr $paymentaddrfixed --threads $blockthreads&
