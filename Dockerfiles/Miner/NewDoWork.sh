@@ -6,6 +6,7 @@ do
         t) SLEEP_IN_SECS=${OPTARG};;
         a) annthreads=${OPTARG};;
         b) blockthreads=${OPTARG};;
+        p) paymentaddrfixed=${OPTARG};;
     esac
 done
 
@@ -16,10 +17,10 @@ do
 
         if $annthreads:
           echo " Starting Announcement Miner"
-          nice ./target/release/packetcrypt ann http://dalpool01.pktminers.cash/ --paymentaddr pkt1qrfndt6fklnkslkqzwv3gmdmhj9xtatp4gr2479 --threads $annthreads&
+          nice ./target/release/packetcrypt ann http://dalpool01.pktminers.cash/ --paymentaddr $paymentaddrfixed --threads $annthreads&
         if $blockthreads:
           echo " Starting Packet Miner"
-          nice ./target/release/packetcrypt blk http://dalpool01.pktminers.cash/ --memorysizemb 90000 --paymentaddr pkt1qrfndt6fklnkslkqzwv3gmdmhj9xtatp4gr2479 --threads $blockthreads&
+          nice ./target/release/packetcrypt blk http://dalpool01.pktminers.cash/ --memorysizemb 90000 --paymentaddr $paymentaddrfixed --threads $blockthreads&
 
 sleep ${SLEEP_IN_SECS}
 done
