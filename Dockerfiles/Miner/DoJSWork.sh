@@ -16,7 +16,7 @@ done
 while (( 1 ))
 do
         echo " About to nuke node"
-        pkill -f ./target/release/packetcrypt
+        pkill -f node
 
         if [ $annthreads ]
         then
