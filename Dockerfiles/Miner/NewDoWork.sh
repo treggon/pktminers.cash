@@ -1,6 +1,6 @@
 #!/bin/bash
 
-while getopts t:a:b: flag
+while getopts t:a:b:p: flag
 do
     case "${flag}" in
         t) SLEEP_IN_SECS=${OPTARG};;
