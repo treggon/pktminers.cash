@@ -21,3 +21,4 @@ ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Mi
 ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Miner/DoJSWork.sh /pktminers.cash/PacketCrypt
 RUN chmod +x /packetcrypt_rs/DoWork.sh
 RUN chmod +x /pktminers.cash/PacketCrypt/DoJSWork.sh
+WORKDIR /packetcrypt_rs
