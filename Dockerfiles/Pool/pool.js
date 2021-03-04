@@ -72,7 +72,7 @@ config.blkHandlers = [
         host: '::',
 
         // Maximum number of simultanious connections to accept before sending 500 errors
-        maxConnections: 50,
+        maxConnections: 100,
 
         root: config
     },
@@ -177,7 +177,7 @@ config.payMaker = {
 };
 
 const main = (argv, config) => {
-    if (argv.indexOf('--master') > -1) {
+    if (argv.indexOf('--master') > -1) {n
         return void Master.create(config.master);
     }
     if (argv.indexOf('--payMaker') > -1) {

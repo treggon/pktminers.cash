@@ -20,7 +20,7 @@ root_workdir = "./datastore/pool"
 
     # Randomly skip validation of some announcements to reduce CPU effort
     # Set to 0 to check all announcements.
-    skip_check_chance = 0.5
+    skip_check_chance = 0
 
     # Number of worker threads
     num_workers = 60
@@ -39,4 +39,4 @@ root_workdir = "./datastore/pool"
     bind_port = 80
 
     # Keep this many of the newest ann files
-    files_to_keep = 500
+    files_to_keep = 5000
