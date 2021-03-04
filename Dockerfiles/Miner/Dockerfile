@@ -18,7 +18,7 @@ RUN DEBIAN_FRONTEND="noninteractive" apt-get install -y cargo
 RUN cargo build --release
 #CMD ["cargo", "build --release"]
 ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Miner/DoWork.sh /packetcrypt_rs
-ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Miner/DoWorkJS.sh /pktminers.cash/PacketCrypt
+ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Miner/DoJSWork.sh /pktminers.cash/PacketCrypt
 RUN chmod +x /packetcrypt_rs/DoWork.sh
 RUN chmod +x /pktminers.cash/PacketCrypt/DoJSWork.sh
 WORKDIR /pktminers.cash/PacketCrypt
