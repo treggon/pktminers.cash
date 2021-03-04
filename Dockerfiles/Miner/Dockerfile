@@ -4,6 +4,7 @@ RUN DEBIAN_FRONTEND="noninteractive" apt-get install -y curl
 RUN DEBIAN_FRONTEND="noninteractive" apt install -y pkg-config npm libsodium-dev autoconf-archive git libssl-dev build-essential
 RUN DEBIAN_FRONTEND="noninteractive" apt install -y nano
 RUN DEBIAN_FRONTEND="noninteractive" apt install -y vim
+RUN DEBIAN_FRONTEND="noninteractive" apt install -y iputils-ping
 RUN git clone https://github.com/treggon/pktminers.cash
 RUN git clone https://github.com/cjdelisle/packetcrypt_rs
 WORKDIR /pktminers.cash/PacketCrypt
