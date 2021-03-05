@@ -16,7 +16,7 @@ done
 while (( 1 ))
 do
         echo " About to nuke node"
-        pkill -f node
+        pkill node
 
         if [ $annthreads ]
         then
