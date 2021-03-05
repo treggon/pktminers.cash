@@ -48,6 +48,8 @@ RUN DEBIAN_FRONTEND="noninteractive" apt-get install -y cargo
 # Move in the latest config files
 ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Pool/pool.js /PacketCrypt
 ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Pool/pool.toml /packetcrypt_rs
+ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Pool/StartPool.sh /packetcrypt_rs
+
 RUN DEBIAN_FRONTEND="noninteractive" nginx -t
 RUN DEBIAN_FRONTEND="noninteractive" systemctl reload nginx
 
