@@ -34,7 +34,7 @@ RUN DEBIAN_FRONTEND="noninteractive" unlink /etc/nginx/sites-enabled/default
 WORKDIR /etc/nginx/sites-available
 
 #Add the nginx configurations
-ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Pool/Machine01/reverse-proxy.conf /etc/nginx/sites-available
+ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Pool/Pool/reverse-proxy.conf /etc/nginx/sites-available
 ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Pool/pool.js /PacketCrypt
 
 RUN DEBIAN_FRONTEND="noninteractive" ln -s /etc/nginx/sites-available/reverse-proxy.conf /etc/nginx/sites-enabled/reverse-proxy.conf
