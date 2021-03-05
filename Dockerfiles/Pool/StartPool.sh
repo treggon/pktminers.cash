@@ -22,6 +22,8 @@ then
     ./bin/pktd --rpcuser=rpcuser --rpcpass=0dc8eff1-d3ba-4b12-97b6-3e145944533e-2158e8a8-ee9f-4a65-89d4-633cc1e7bb47 --miningaddr $pktd_address
 fi
 
+
+cd ../PacketCrypt
 if [ $masternodestart ]
 then
     echo " Starting Master Node"
