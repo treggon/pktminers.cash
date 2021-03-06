@@ -1,13 +1,13 @@
 #!/bin/bash
 
-while getopts t:a:b:p:o: flag
+while getopts t:a:b:p:h: flag
 do
     case "${flag}" in
         t) SLEEP_IN_SECS=${OPTARG};;
         a) annthreads=${OPTARG};;
         b) blockthreads=${OPTARG};;
         p) paymentaddrfixed=${OPTARG};;
-        o) pooladdress=${OPTARG};;
+        h) pooladdress=${OPTARG};;
     esac
 done
 
