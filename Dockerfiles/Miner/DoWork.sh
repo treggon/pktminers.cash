@@ -19,12 +19,12 @@ do
         if [ $annthreads ]
         then
             echo " Starting Announcement Miner"
-            nice ./packetcrypt_rs/target/release/packetcrypt ann $pooladdress --paymentaddr $paymentaddrfixed --threads $annthreads&
+            ./packetcrypt_rs/target/release/packetcrypt ann $pooladdress --paymentaddr $paymentaddrfixed --threads $annthreads&
         fi
         if [ $blockthreads ]
         then
             echo " Starting Packet Miner"
-            nice ./packetcrypt_rs/target/release/packetcrypt blk $pooladdress --memorysizemb 90000 --paymentaddr $paymentaddrfixed --threads $blockthreads&
+            ./packetcrypt_rs/target/release/packetcrypt blk $pooladdress --memorysizemb 90000 --paymentaddr $paymentaddrfixed --threads $blockthreads&
         fi
 
 sleep ${SLEEP_IN_SECS}
