@@ -1,13 +1,13 @@
 #!/bin/bash
 
-while getopts pktd:master:paymaker:blkh:annh: flag
+while getopts p:m:k:b:a: flag
 do
     case "${flag}" in
-        pktd) pktd_address=${OPTARG};;
-        master) masternodestart=1;;
-        paymaker) paymakerstart=1;;
-        blkh) blockhandlerstart=1;;
-        annh) annhandlerstart=1;;
+        p) pktd_address=${OPTARG};;
+        m) masternodestart=1;;
+        k) paymakerstart=1;;
+        b) blockhandlerstart=1;;
+        a) annhandlerstart=1;;
     esac
 done
 
