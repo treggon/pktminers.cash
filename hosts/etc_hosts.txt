@@ -1,7 +1,7 @@
 127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
 ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
 172.10.2.101 ann03.pktminers.cash ann03
-172.10.2.99 dalpool01.pktminers.cash dalpool01
-172.10.2.99 blk01.pktminers.cash blk01
-172.10.2.99 ann02.pktminers.cash ann02
-172.10.2.99 paymaker.pktminers.cash paymaker
+172.10.2.101 dalpool01.pktminers.cash dalpool01
+172.10.2.101 blk01.pktminers.cash blk01
+172.10.2.101 ann02.pktminers.cash ann02
+172.10.2.101 paymaker.pktminers.cash paymaker

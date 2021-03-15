@@ -177,7 +177,7 @@ config.payMaker = {
 };
 
 const main = (argv, config) => {
-    if (argv.indexOf('--master') > -1) {n
+    if (argv.indexOf('--master') > -1) {
         return void Master.create(config.master);
     }
     if (argv.indexOf('--payMaker') > -1) {
