@@ -43,7 +43,7 @@ config.rpc = {
     protocol: 'http',
     user: 'rpcuser',
     pass: '0dc8eff1-d3ba-4b12-97b6-3e145944533e-2158e8a8-ee9f-4a65-89d4-633cc1e7bb47',
-    host: '127.0.0.1',
+    host: '172.10.2.101',
     port: 64765,
     rejectUnauthorized: false
 };
