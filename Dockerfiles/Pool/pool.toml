@@ -31,7 +31,7 @@ root_workdir = "./datastore/pool"
     input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann02.pktminers.cash:8202/submit"
+    public_url = "http://ann01.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
@@ -62,7 +62,7 @@ root_workdir = "./datastore/pool"
         input_queue_len = 256
 
         # The public URL of this ann handler
-        public_url = "http://ann01.pktminers.cash:8201/submit"
+        public_url = "http://ann02.pktminers.cash:8202/submit"
 
         # Bind to this port
         # NOTE: To bind low ports with non-root user:

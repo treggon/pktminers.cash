@@ -34,14 +34,15 @@ RUN DEBIAN_FRONTEND="noninteractive" unlink /etc/nginx/sites-enabled/default
 WORKDIR /etc/nginx/sites-available
 
 #Add the nginx configurations
-ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Pool/Pool/reverse-proxy.conf /etc/nginx/sites-available
+ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Annhandler02/reverse-proxy.conf /etc/nginx/sites-available
 RUN DEBIAN_FRONTEND="noninteractive" ln -s /etc/nginx/sites-available/reverse-proxy.conf /etc/nginx/sites-enabled/reverse-proxy.conf
 RUN DEBIAN_FRONTEND="noninteractive" rm default
 
 #Setup Rust, Setup Cargo
-WORKDIR /pktd
+WORKDIR /packetcrypt_rs
 RUN curl https://sh.rustup.rs -sSf --no-modify-path none | sh -s
 RUN DEBIAN_FRONTEND="noninteractive" apt-get install -y cargo
+RUN cargo build --release
 
 # Move in the latest config files
 ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Pool/pool.toml /packetcrypt_rs
