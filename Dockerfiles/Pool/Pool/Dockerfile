@@ -56,13 +56,8 @@ RUN DEBIAN_FRONTEND="noninteractive" systemctl enable nginx
 
 EXPOSE 80/tcp
 EXPOSE 8080/tcp
-EXPOSE 8081/tcp
-EXPOSE 8082/tcp
-EXPOSE 8083/tcp
 EXPOSE 8100/tcp
-EXPOSE 8201/tcp
-EXPOSE 8203/tcp
-EXPOSE 8299/tcp
+EXPOSE 8081/tcp
 
 EXPOSE 64765/tcp
 VOLUME ["/blockchain"]
