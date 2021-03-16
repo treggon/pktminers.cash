@@ -36,7 +36,7 @@ root_workdir = "./datastore/pool"
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
     # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-    bind_port = 80
+    bind_port = 8201
 
     # Keep this many of the newest ann files
     files_to_keep = 5000
@@ -67,7 +67,7 @@ root_workdir = "./datastore/pool"
         # Bind to this port
         # NOTE: To bind low ports with non-root user:
         # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-        bind_port = 80
+        bind_port = 8202
 
         # Keep this many of the newest ann files
         files_to_keep = 5000
