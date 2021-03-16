@@ -51,7 +51,7 @@ ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Po
 ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Pool/StartPool.sh /pktd
 
 RUN DEBIAN_FRONTEND="noninteractive" nginx -t
-RUN DEBIAN_FRONTEND="noninteractive" systemctl reload nginx
+RUN DEBIAN_FRONTEND="noninteractive" systemctl start nginx
 RUN DEBIAN_FRONTEND="noninteractive" systemctl enable nginx
 
 EXPOSE 80/tcp
