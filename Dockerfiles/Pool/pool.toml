@@ -28,10 +28,10 @@ root_workdir = "./datastore/pool"
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
     # is in fact overloaded #256 default
-    input_queue_len = 128
+    input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann02.pktminers.cash:8203/submit"
+    public_url = "http://ann02.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:

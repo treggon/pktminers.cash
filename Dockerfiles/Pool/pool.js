@@ -43,7 +43,7 @@ config.rpc = {
     protocol: 'http',
     user: 'rpcuser',
     pass: '0dc8eff1-d3ba-4b12-97b6-3e145944533e-2158e8a8-ee9f-4a65-89d4-633cc1e7bb47',
-    host: '172.10.2.101',
+    host: '127.0.0.1',
     port: 64765,
     rejectUnauthorized: false
 };
@@ -53,7 +53,7 @@ config.annHandlers = [
     {
         // What address should be advertized for accessing this ann handler (external address)
         // You will also need to configure the handler itself in packetcrypt_rs
-        url: 'http://ann02.pktminers.cash:8082',
+        url: 'http://ann02.pktminers.cash:8201',
     },
 ];
 
@@ -63,16 +63,16 @@ config.blkHandlers = [
     {
         // What address should be advertized for accessing this block handler (external address)
         //url: 'http://pool.cjdns.fr/ng_blk0',
-        url: 'http://blk01.pktminers.cash:8082',
+        url: 'http://blk01.pktminers.cash:8100',
 
         // Which port to run this block handler on
-        port: 8082,
+        port: 8100,
 
         // What address to bind to, set to localhost if proxying
         host: '::',
 
         // Maximum number of simultanious connections to accept before sending 500 errors
-        maxConnections: 100,
+        maxConnections: 144,
 
         root: config
     },
@@ -114,7 +114,7 @@ config.payMaker = {
     url: 'http://paymaker.pktminers.cash',
 
     // Which port to run the paymaker on
-    port: 8083,
+    port: 8081,
 
     // What address to bind to, set to localhost if proxying
     host: '::',
