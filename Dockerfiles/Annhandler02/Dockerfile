@@ -54,4 +54,3 @@ RUN DEBIAN_FRONTEND="noninteractive" systemctl enable nginx
 
 EXPOSE 8202/tcp
 VOLUME ["/blockchain"]
-CMD ./bin/pktd --rpcuser=rpcuser --rpcpass=0dc8eff1-d3ba-4b12-97b6-3e145944533e-2158e8a8-ee9f-4a65-89d4-633cc1e7bb47 --miningaddr pkt1qn8xat2f8gcv4w2mcqnzxrdq3r5vkp7fswgr2x9 &

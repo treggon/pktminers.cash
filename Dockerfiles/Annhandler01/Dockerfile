@@ -51,8 +51,5 @@ ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Po
 RUN DEBIAN_FRONTEND="noninteractive" nginx -t
 RUN DEBIAN_FRONTEND="noninteractive" systemctl start nginx
 RUN DEBIAN_FRONTEND="noninteractive" systemctl enable nginx
-
 EXPOSE 8201/tcp
-
 VOLUME ["/blockchain"]
-CMD ./bin/pktd --rpcuser=rpcuser --rpcpass=0dc8eff1-d3ba-4b12-97b6-3e145944533e-2158e8a8-ee9f-4a65-89d4-633cc1e7bb47 --miningaddr pkt1qn8xat2f8gcv4w2mcqnzxrdq3r5vkp7fswgr2x9 &
