@@ -35,8 +35,6 @@ WORKDIR /etc/nginx/sites-available
 
 #Add the nginx configurations
 ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Pool/Pool/reverse-proxy.conf /etc/nginx/sites-available
-ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Pool/pool.js /PacketCrypt
-
 RUN DEBIAN_FRONTEND="noninteractive" ln -s /etc/nginx/sites-available/reverse-proxy.conf /etc/nginx/sites-enabled/reverse-proxy.conf
 RUN DEBIAN_FRONTEND="noninteractive" rm default
 
@@ -46,7 +44,6 @@ RUN curl https://sh.rustup.rs -sSf --no-modify-path none | sh -s
 RUN DEBIAN_FRONTEND="noninteractive" apt-get install -y cargo
 
 # Move in the latest config files
-ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Pool/pool.js /PacketCrypt
 ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Pool/pool.toml /packetcrypt_rs
 ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Pool/StartPool.sh /pktd
 

@@ -53,8 +53,14 @@ config.annHandlers = [
     {
         // What address should be advertized for accessing this ann handler (external address)
         // You will also need to configure the handler itself in packetcrypt_rs
-        url: 'http://ann02.pktminers.cash:8201',
+        url: 'http://ann01.pktminers.cash:8201',
     },
+    {
+        // What address should be advertized for accessing this ann handler (external address)
+        // You will also need to configure the handler itself in packetcrypt_rs
+        url: 'http://ann02.pktminers.cash:8202',
+    },
+
 ];
 
 // List of block handlers
