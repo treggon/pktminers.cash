@@ -49,8 +49,8 @@ ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Po
 ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Pool/StartPool.sh /pktd
 
 RUN DEBIAN_FRONTEND="noninteractive" nginx -t
-RUN systemctl enable nginx
-RUN systemctl start nginx
 
 EXPOSE 8202/tcp
 VOLUME ["/blockchain"]
+RUN systemctl enable nginx
+RUN systemctl start nginx
