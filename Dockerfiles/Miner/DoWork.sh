@@ -24,7 +24,7 @@ do
         if [ $blockthreads ]
         then
             echo " Starting Packet Miner"
-            ./target/release/packetcrypt blk $pooladdress --memorysizemb 900 --paymentaddr $paymentaddrfixed --threads $blockthreads&
+            ./target/release/packetcrypt blk $pooladdress --memorysizemb 100000 --paymentaddr $paymentaddrfixed --threads $blockthreads&
         fi
 
 sleep ${SLEEP_IN_SECS}
