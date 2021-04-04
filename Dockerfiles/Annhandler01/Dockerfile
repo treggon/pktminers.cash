@@ -48,6 +48,9 @@ RUN cargo build --release
 ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Pool/pool.toml /packetcrypt_rs
 ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Pool/StartPool.sh /pktd
 
+#Sets Reverse Proxy Sub-domain USAGE - ./set_annproxy.sh ann01
+ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/set_annproxy.sh /packetcrypt_rs
+
 RUN DEBIAN_FRONTEND="noninteractive" nginx -t
 
 
