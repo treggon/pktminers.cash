@@ -36,7 +36,7 @@ root_workdir = "./datastore/pool"
   # Bind to this port
   # NOTE: To bind low ports with non-root user:
   # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-  bind_port = 820
+  bind_port = 8201
 
   # Keep this many of the newest ann files
   files_to_keep = 5000
@@ -1352,36 +1352,6 @@ root_workdir = "./datastore/pool"
 
   # The public URL of this ann handler
   public_url = "http://ann36.pktminers.cash/submit"
-
-  # Bind to this port
-  # NOTE: To bind low ports with non-root user:
-  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-  bind_port = 8201
-
-  # Keep this many of the newest ann files
-  files_to_keep = 5000
-[ann_handler.ah36]
-  # This is an optional password, if specified then no block miners will be
-  # able to use this handler unless they are using the same password on their
-  # command line using the -P or --handlerpass flag
-  # This will help prevent free-loader pools which pull announcements from
-  # your handlers but don't remunerate the announcement miners.
-  #block_miner_passwd = "you_can_put_a_secret_here"
-
-  # Randomly skip validation of some announcements to reduce CPU effort
-  # Set to 0 to check all announcements.
-  skip_check_chance = 0
-
-  # Number of worker threads
-  num_workers = 18
-
-  # Length of the input queue, keeping this low will create back-pressure
-  # and prevent miners from posting too many announcements when the server
-  # is in fact overloaded #256 default
-  input_queue_len = 256
-
-  # The public URL of this ann handler
-  public_url = "http://ann37.pktminers.cash/submit"
 
   # Bind to this port
   # NOTE: To bind low ports with non-root user:
