@@ -84,7 +84,7 @@ EXPOSE 8080/tcp
 EXPOSE 8100/tcp
 
 #AnnHanler
-EXPOSE 8201/tcp
+#EXPOSE 8201/tcp
 
 #RPC
 EXPOSE 64765/tcp

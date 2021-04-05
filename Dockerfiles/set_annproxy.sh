@@ -9,3 +9,5 @@ echo "server {
         }
 }
 " > /etc/nginx/sites-available/reverse-proxy.conf
+systemctl start nginx
+systemctl status nginx
