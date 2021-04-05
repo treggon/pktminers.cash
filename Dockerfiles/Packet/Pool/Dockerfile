@@ -42,9 +42,6 @@ RUN DEBIAN_FRONTEND="noninteractive" apt install -y nginx
 RUN DEBIAN_FRONTEND="noninteractive" unlink /etc/nginx/sites-enabled/default
 WORKDIR /etc/nginx/sites-available
 
-#Add the nginx configurations
-ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Pool/Pool/reverse-proxy.conf /etc/nginx/sites-available
-ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Pool/pool.js /PacketCrypt
 
 RUN DEBIAN_FRONTEND="noninteractive" ln -s /etc/nginx/sites-available/reverse-proxy.conf /etc/nginx/sites-enabled/reverse-proxy.conf
 RUN DEBIAN_FRONTEND="noninteractive" rm default
@@ -59,10 +56,12 @@ WORKDIR /packetcrypt_rs
 RUN DEBIAN_FRONTEND="noninteractive" apt-get install -y cargo
 RUN cargo build --release --features jemalloc
 
+#Add the nginx configurations
+ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Packet/Pool/reverse-proxy.conf /etc/nginx/sites-available
 # Move in the latest config files
-ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Pool/pool.js /PacketCrypt
-ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Pool/pool.toml /packetcrypt_rs
-ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Pool/StartPool.sh /pktd
+ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Packet/pool.js /PacketCrypt
+ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Packet/pool.toml /packetcrypt_rs
+ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Packet/StartPool.sh /pktd
 
 RUN DEBIAN_FRONTEND="noninteractive" nginx -t
 RUN DEBIAN_FRONTEND="noninteractive" systemctl start nginx
