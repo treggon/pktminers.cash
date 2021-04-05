@@ -19,7 +19,7 @@ RUN DEBIAN_FRONTEND="noninteractive" apt install -y net-tools
 RUN git clone https://github.com/treggon/pktminers.cash
 RUN git clone --branch develop https://github.com/pkt-cash/pktd
 RUN git clone https://github.com/cjdelisle/PacketCrypt
-RUN git clone --branch develop https://github.com/cjdelisle/packetcrypt_rs
+RUN git clone https://github.com/cjdelisle/packetcrypt_rs
 
 # Install PKTD
 WORKDIR /pktd
