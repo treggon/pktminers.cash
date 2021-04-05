@@ -1,0 +1,1392 @@
+# Password used by your paymaker to post logs for payment
+paymaker_http_password = "0dc8eff1-d3ba-4b12-97b6-3e145944533e-2158e8a8-ee9f-4a65-89d4-633cc1e7bb47"
+
+# URL of the pool master, used for getting configuration and work
+master_url = "http://dalpool.pktminers.cash"
+
+# Store the data here
+root_workdir = "./datastore/pool"
+
+# You can have multiple announcement handlers defined in the same conf file
+# You select the one you want using the command line, for example:
+# packetcrypt ah --config /path/to/config.toml ah0
+[ann_handler.ah0]
+  # This is an optional password, if specified then no block miners will be
+  # able to use this handler unless they are using the same password on their
+  # command line using the -P or --handlerpass flag
+  # This will help prevent free-loader pools which pull announcements from
+  # your handlers but don't remunerate the announcement miners.
+  #block_miner_passwd = "you_can_put_a_secret_here"
+
+  # Randomly skip validation of some announcements to reduce CPU effort
+  # Set to 0 to check all announcements.
+  skip_check_chance = 0
+
+  # Number of worker threads
+  num_workers = 18
+
+  # Length of the input queue, keeping this low will create back-pressure
+  # and prevent miners from posting too many announcements when the server
+  # is in fact overloaded #256 default
+  input_queue_len = 256
+
+  # The public URL of this ann handler
+  public_url = "http://ann01.pktminers.cash/submit"
+
+  # Bind to this port
+  # NOTE: To bind low ports with non-root user:
+  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+  bind_port = 820
+
+  # Keep this many of the newest ann files
+  files_to_keep = 5000
+[ann_handler.ah1]
+  # This is an optional password, if specified then no block miners will be
+  # able to use this handler unless they are using the same password on their
+  # command line using the -P or --handlerpass flag
+  # This will help prevent free-loader pools which pull announcements from
+  # your handlers but don't remunerate the announcement miners.
+  #block_miner_passwd = "you_can_put_a_secret_here"
+
+  # Randomly skip validation of some announcements to reduce CPU effort
+  # Set to 0 to check all announcements.
+  skip_check_chance = 0
+
+  # Number of worker threads
+  num_workers = 18
+
+  # Length of the input queue, keeping this low will create back-pressure
+  # and prevent miners from posting too many announcements when the server
+  # is in fact overloaded #256 default
+  input_queue_len = 256
+
+  # The public URL of this ann handler
+  public_url = "http://ann02.pktminers.cash:8201/submit"
+
+  # Bind to this port
+  # NOTE: To bind low ports with non-root user:
+  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+  bind_port = 8201
+
+  # Keep this many of the newest ann files
+  files_to_keep = 5000
+[ann_handler.ah2]
+  # This is an optional password, if specified then no block miners will be
+  # able to use this handler unless they are using the same password on their
+  # command line using the -P or --handlerpass flag
+  # This will help prevent free-loader pools which pull announcements from
+  # your handlers but don't remunerate the announcement miners.
+  #block_miner_passwd = "you_can_put_a_secret_here"
+
+  # Randomly skip validation of some announcements to reduce CPU effort
+  # Set to 0 to check all announcements.
+  skip_check_chance = 0
+
+  # Number of worker threads
+  num_workers = 18
+
+  # Length of the input queue, keeping this low will create back-pressure
+  # and prevent miners from posting too many announcements when the server
+  # is in fact overloaded #256 default
+  input_queue_len = 256
+
+  # The public URL of this ann handler
+  public_url = "http://ann03.pktminers.cash:8201/submit"
+
+  # Bind to this port
+  # NOTE: To bind low ports with non-root user:
+  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+  bind_port = 8201
+
+  # Keep this many of the newest ann files
+  files_to_keep = 5000
+[ann_handler.ah3]
+  # This is an optional password, if specified then no block miners will be
+  # able to use this handler unless they are using the same password on their
+  # command line using the -P or --handlerpass flag
+  # This will help prevent free-loader pools which pull announcements from
+  # your handlers but don't remunerate the announcement miners.
+  #block_miner_passwd = "you_can_put_a_secret_here"
+
+  # Randomly skip validation of some announcements to reduce CPU effort
+  # Set to 0 to check all announcements.
+  skip_check_chance = 0
+
+  # Number of worker threads
+  num_workers = 18
+
+  # Length of the input queue, keeping this low will create back-pressure
+  # and prevent miners from posting too many announcements when the server
+  # is in fact overloaded #256 default
+  input_queue_len = 256
+
+  # The public URL of this ann handler
+  public_url = "http://ann04.pktminers.cash/submit"
+
+  # Bind to this port
+  # NOTE: To bind low ports with non-root user:
+  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+  bind_port = 8201
+
+  # Keep this many of the newest ann files
+  files_to_keep = 5000
+[ann_handler.ah4]
+  # This is an optional password, if specified then no block miners will be
+  # able to use this handler unless they are using the same password on their
+  # command line using the -P or --handlerpass flag
+  # This will help prevent free-loader pools which pull announcements from
+  # your handlers but don't remunerate the announcement miners.
+  #block_miner_passwd = "you_can_put_a_secret_here"
+
+  # Randomly skip validation of some announcements to reduce CPU effort
+  # Set to 0 to check all announcements.
+  skip_check_chance = 0
+
+  # Number of worker threads
+  num_workers = 18
+
+  # Length of the input queue, keeping this low will create back-pressure
+  # and prevent miners from posting too many announcements when the server
+  # is in fact overloaded #256 default
+  input_queue_len = 256
+
+  # The public URL of this ann handler
+  public_url = "http://ann05.pktminers.cash/submit"
+
+  # Bind to this port
+  # NOTE: To bind low ports with non-root user:
+  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+  bind_port = 8201
+
+  # Keep this many of the newest ann files
+  files_to_keep = 5000
+[ann_handler.ah5]
+  # This is an optional password, if specified then no block miners will be
+  # able to use this handler unless they are using the same password on their
+  # command line using the -P or --handlerpass flag
+  # This will help prevent free-loader pools which pull announcements from
+  # your handlers but don't remunerate the announcement miners.
+  #block_miner_passwd = "you_can_put_a_secret_here"
+
+  # Randomly skip validation of some announcements to reduce CPU effort
+  # Set to 0 to check all announcements.
+  skip_check_chance = 0
+
+  # Number of worker threads
+  num_workers = 18
+
+  # Length of the input queue, keeping this low will create back-pressure
+  # and prevent miners from posting too many announcements when the server
+  # is in fact overloaded #256 default
+  input_queue_len = 256
+
+  # The public URL of this ann handler
+  public_url = "http://ann06.pktminers.cash/submit"
+
+  # Bind to this port
+  # NOTE: To bind low ports with non-root user:
+  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+  bind_port = 8201
+
+  # Keep this many of the newest ann files
+  files_to_keep = 5000
+[ann_handler.ah6]
+  # This is an optional password, if specified then no block miners will be
+  # able to use this handler unless they are using the same password on their
+  # command line using the -P or --handlerpass flag
+  # This will help prevent free-loader pools which pull announcements from
+  # your handlers but don't remunerate the announcement miners.
+  #block_miner_passwd = "you_can_put_a_secret_here"
+
+  # Randomly skip validation of some announcements to reduce CPU effort
+  # Set to 0 to check all announcements.
+  skip_check_chance = 0
+
+  # Number of worker threads
+  num_workers = 18
+
+  # Length of the input queue, keeping this low will create back-pressure
+  # and prevent miners from posting too many announcements when the server
+  # is in fact overloaded #256 default
+  input_queue_len = 256
+
+  # The public URL of this ann handler
+  public_url = "http://ann07.pktminers.cash/submit"
+
+  # Bind to this port
+  # NOTE: To bind low ports with non-root user:
+  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+  bind_port = 8201
+
+  # Keep this many of the newest ann files
+  files_to_keep = 5000
+[ann_handler.ah7]
+  # This is an optional password, if specified then no block miners will be
+  # able to use this handler unless they are using the same password on their
+  # command line using the -P or --handlerpass flag
+  # This will help prevent free-loader pools which pull announcements from
+  # your handlers but don't remunerate the announcement miners.
+  #block_miner_passwd = "you_can_put_a_secret_here"
+
+  # Randomly skip validation of some announcements to reduce CPU effort
+  # Set to 0 to check all announcements.
+  skip_check_chance = 0
+
+  # Number of worker threads
+  num_workers = 18
+
+  # Length of the input queue, keeping this low will create back-pressure
+  # and prevent miners from posting too many announcements when the server
+  # is in fact overloaded #256 default
+  input_queue_len = 256
+
+  # The public URL of this ann handler
+  public_url = "http://ann08.pktminers.cash/submit"
+
+  # Bind to this port
+  # NOTE: To bind low ports with non-root user:
+  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+  bind_port = 8201
+
+  # Keep this many of the newest ann files
+  files_to_keep = 5000
+[ann_handler.ah8]
+  # This is an optional password, if specified then no block miners will be
+  # able to use this handler unless they are using the same password on their
+  # command line using the -P or --handlerpass flag
+  # This will help prevent free-loader pools which pull announcements from
+  # your handlers but don't remunerate the announcement miners.
+  #block_miner_passwd = "you_can_put_a_secret_here"
+
+  # Randomly skip validation of some announcements to reduce CPU effort
+  # Set to 0 to check all announcements.
+  skip_check_chance = 0
+
+  # Number of worker threads
+  num_workers = 18
+
+  # Length of the input queue, keeping this low will create back-pressure
+  # and prevent miners from posting too many announcements when the server
+  # is in fact overloaded #256 default
+  input_queue_len = 256
+
+  # The public URL of this ann handler
+  public_url = "http://ann09.pktminers.cash/submit"
+
+  # Bind to this port
+  # NOTE: To bind low ports with non-root user:
+  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+  bind_port = 8201
+
+  # Keep this many of the newest ann files
+  files_to_keep = 5000
+[ann_handler.ah9]
+  # This is an optional password, if specified then no block miners will be
+  # able to use this handler unless they are using the same password on their
+  # command line using the -P or --handlerpass flag
+  # This will help prevent free-loader pools which pull announcements from
+  # your handlers but don't remunerate the announcement miners.
+  #block_miner_passwd = "you_can_put_a_secret_here"
+
+  # Randomly skip validation of some announcements to reduce CPU effort
+  # Set to 0 to check all announcements.
+  skip_check_chance = 0
+
+  # Number of worker threads
+  num_workers = 18
+
+  # Length of the input queue, keeping this low will create back-pressure
+  # and prevent miners from posting too many announcements when the server
+  # is in fact overloaded #256 default
+  input_queue_len = 256
+
+  # The public URL of this ann handler
+  public_url = "http://ann10.pktminers.cash/submit"
+
+  # Bind to this port
+  # NOTE: To bind low ports with non-root user:
+  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+  bind_port = 8201
+
+  # Keep this many of the newest ann files
+  files_to_keep = 5000
+[ann_handler.ah10]
+  # This is an optional password, if specified then no block miners will be
+  # able to use this handler unless they are using the same password on their
+  # command line using the -P or --handlerpass flag
+  # This will help prevent free-loader pools which pull announcements from
+  # your handlers but don't remunerate the announcement miners.
+  #block_miner_passwd = "you_can_put_a_secret_here"
+
+  # Randomly skip validation of some announcements to reduce CPU effort
+  # Set to 0 to check all announcements.
+  skip_check_chance = 0
+
+  # Number of worker threads
+  num_workers = 18
+
+  # Length of the input queue, keeping this low will create back-pressure
+  # and prevent miners from posting too many announcements when the server
+  # is in fact overloaded #256 default
+  input_queue_len = 256
+
+  # The public URL of this ann handler
+  public_url = "http://ann11.pktminers.cash/submit"
+
+  # Bind to this port
+  # NOTE: To bind low ports with non-root user:
+  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+  bind_port = 8201
+
+  # Keep this many of the newest ann files
+  files_to_keep = 5000
+[ann_handler.ah11]
+  # This is an optional password, if specified then no block miners will be
+  # able to use this handler unless they are using the same password on their
+  # command line using the -P or --handlerpass flag
+  # This will help prevent free-loader pools which pull announcements from
+  # your handlers but don't remunerate the announcement miners.
+  #block_miner_passwd = "you_can_put_a_secret_here"
+
+  # Randomly skip validation of some announcements to reduce CPU effort
+  # Set to 0 to check all announcements.
+  skip_check_chance = 0
+
+  # Number of worker threads
+  num_workers = 18
+
+  # Length of the input queue, keeping this low will create back-pressure
+  # and prevent miners from posting too many announcements when the server
+  # is in fact overloaded #256 default
+  input_queue_len = 256
+
+  # The public URL of this ann handler
+  public_url = "http://ann12.pktminers.cash:8201/submit"
+
+  # Bind to this port
+  # NOTE: To bind low ports with non-root user:
+  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+  bind_port = 8201
+
+  # Keep this many of the newest ann files
+  files_to_keep = 5000
+[ann_handler.ah12]
+  # This is an optional password, if specified then no block miners will be
+  # able to use this handler unless they are using the same password on their
+  # command line using the -P or --handlerpass flag
+  # This will help prevent free-loader pools which pull announcements from
+  # your handlers but don't remunerate the announcement miners.
+  #block_miner_passwd = "you_can_put_a_secret_here"
+
+  # Randomly skip validation of some announcements to reduce CPU effort
+  # Set to 0 to check all announcements.
+  skip_check_chance = 0
+
+  # Number of worker threads
+  num_workers = 18
+
+  # Length of the input queue, keeping this low will create back-pressure
+  # and prevent miners from posting too many announcements when the server
+  # is in fact overloaded #256 default
+  input_queue_len = 256
+
+  # The public URL of this ann handler
+  public_url = "http://ann13.pktminers.cash:8201/submit"
+
+  # Bind to this port
+  # NOTE: To bind low ports with non-root user:
+  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+  bind_port = 8201
+
+  # Keep this many of the newest ann files
+  files_to_keep = 5000
+[ann_handler.ah13]
+  # This is an optional password, if specified then no block miners will be
+  # able to use this handler unless they are using the same password on their
+  # command line using the -P or --handlerpass flag
+  # This will help prevent free-loader pools which pull announcements from
+  # your handlers but don't remunerate the announcement miners.
+  #block_miner_passwd = "you_can_put_a_secret_here"
+
+  # Randomly skip validation of some announcements to reduce CPU effort
+  # Set to 0 to check all announcements.
+  skip_check_chance = 0
+
+  # Number of worker threads
+  num_workers = 18
+
+  # Length of the input queue, keeping this low will create back-pressure
+  # and prevent miners from posting too many announcements when the server
+  # is in fact overloaded #256 default
+  input_queue_len = 256
+
+  # The public URL of this ann handler
+  public_url = "http://ann14.pktminers.cash/submit"
+
+  # Bind to this port
+  # NOTE: To bind low ports with non-root user:
+  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+  bind_port = 8201
+
+  # Keep this many of the newest ann files
+  files_to_keep = 5000
+[ann_handler.ah14]
+  # This is an optional password, if specified then no block miners will be
+  # able to use this handler unless they are using the same password on their
+  # command line using the -P or --handlerpass flag
+  # This will help prevent free-loader pools which pull announcements from
+  # your handlers but don't remunerate the announcement miners.
+  #block_miner_passwd = "you_can_put_a_secret_here"
+
+  # Randomly skip validation of some announcements to reduce CPU effort
+  # Set to 0 to check all announcements.
+  skip_check_chance = 0
+
+  # Number of worker threads
+  num_workers = 18
+
+  # Length of the input queue, keeping this low will create back-pressure
+  # and prevent miners from posting too many announcements when the server
+  # is in fact overloaded #256 default
+  input_queue_len = 256
+
+  # The public URL of this ann handler
+  public_url = "http://ann15.pktminers.cash/submit"
+
+  # Bind to this port
+  # NOTE: To bind low ports with non-root user:
+  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+  bind_port = 8201
+
+  # Keep this many of the newest ann files
+  files_to_keep = 5000
+[ann_handler.ah15]
+  # This is an optional password, if specified then no block miners will be
+  # able to use this handler unless they are using the same password on their
+  # command line using the -P or --handlerpass flag
+  # This will help prevent free-loader pools which pull announcements from
+  # your handlers but don't remunerate the announcement miners.
+  #block_miner_passwd = "you_can_put_a_secret_here"
+
+  # Randomly skip validation of some announcements to reduce CPU effort
+  # Set to 0 to check all announcements.
+  skip_check_chance = 0
+
+  # Number of worker threads
+  num_workers = 18
+
+  # Length of the input queue, keeping this low will create back-pressure
+  # and prevent miners from posting too many announcements when the server
+  # is in fact overloaded #256 default
+  input_queue_len = 256
+
+  # The public URL of this ann handler
+  public_url = "http://ann16.pktminers.cash/submit"
+
+  # Bind to this port
+  # NOTE: To bind low ports with non-root user:
+  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+  bind_port = 8201
+
+  # Keep this many of the newest ann files
+  files_to_keep = 5000
+[ann_handler.ah16]
+  # This is an optional password, if specified then no block miners will be
+  # able to use this handler unless they are using the same password on their
+  # command line using the -P or --handlerpass flag
+  # This will help prevent free-loader pools which pull announcements from
+  # your handlers but don't remunerate the announcement miners.
+  #block_miner_passwd = "you_can_put_a_secret_here"
+
+  # Randomly skip validation of some announcements to reduce CPU effort
+  # Set to 0 to check all announcements.
+  skip_check_chance = 0
+
+  # Number of worker threads
+  num_workers = 18
+
+  # Length of the input queue, keeping this low will create back-pressure
+  # and prevent miners from posting too many announcements when the server
+  # is in fact overloaded #256 default
+  input_queue_len = 256
+
+  # The public URL of this ann handler
+  public_url = "http://ann17.pktminers.cash/submit"
+
+  # Bind to this port
+  # NOTE: To bind low ports with non-root user:
+  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+  bind_port = 8201
+
+  # Keep this many of the newest ann files
+  files_to_keep = 5000
+[ann_handler.ah17]
+  # This is an optional password, if specified then no block miners will be
+  # able to use this handler unless they are using the same password on their
+  # command line using the -P or --handlerpass flag
+  # This will help prevent free-loader pools which pull announcements from
+  # your handlers but don't remunerate the announcement miners.
+  #block_miner_passwd = "you_can_put_a_secret_here"
+
+  # Randomly skip validation of some announcements to reduce CPU effort
+  # Set to 0 to check all announcements.
+  skip_check_chance = 0
+
+  # Number of worker threads
+  num_workers = 18
+
+  # Length of the input queue, keeping this low will create back-pressure
+  # and prevent miners from posting too many announcements when the server
+  # is in fact overloaded #256 default
+  input_queue_len = 256
+
+  # The public URL of this ann handler
+  public_url = "http://ann18.pktminers.cash/submit"
+
+  # Bind to this port
+  # NOTE: To bind low ports with non-root user:
+  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+  bind_port = 8201
+
+  # Keep this many of the newest ann files
+  files_to_keep = 5000
+[ann_handler.ah18]
+  # This is an optional password, if specified then no block miners will be
+  # able to use this handler unless they are using the same password on their
+  # command line using the -P or --handlerpass flag
+  # This will help prevent free-loader pools which pull announcements from
+  # your handlers but don't remunerate the announcement miners.
+  #block_miner_passwd = "you_can_put_a_secret_here"
+
+  # Randomly skip validation of some announcements to reduce CPU effort
+  # Set to 0 to check all announcements.
+  skip_check_chance = 0
+
+  # Number of worker threads
+  num_workers = 18
+
+  # Length of the input queue, keeping this low will create back-pressure
+  # and prevent miners from posting too many announcements when the server
+  # is in fact overloaded #256 default
+  input_queue_len = 256
+
+  # The public URL of this ann handler
+  public_url = "http://ann19.pktminers.cash/submit"
+
+  # Bind to this port
+  # NOTE: To bind low ports with non-root user:
+  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+  bind_port = 8201
+
+  # Keep this many of the newest ann files
+  files_to_keep = 5000
+[ann_handler.ah19]
+  # This is an optional password, if specified then no block miners will be
+  # able to use this handler unless they are using the same password on their
+  # command line using the -P or --handlerpass flag
+  # This will help prevent free-loader pools which pull announcements from
+  # your handlers but don't remunerate the announcement miners.
+  #block_miner_passwd = "you_can_put_a_secret_here"
+
+  # Randomly skip validation of some announcements to reduce CPU effort
+  # Set to 0 to check all announcements.
+  skip_check_chance = 0
+
+  # Number of worker threads
+  num_workers = 18
+
+  # Length of the input queue, keeping this low will create back-pressure
+  # and prevent miners from posting too many announcements when the server
+  # is in fact overloaded #256 default
+  input_queue_len = 256
+
+  # The public URL of this ann handler
+  public_url = "http://ann20.pktminers.cash/submit"
+
+  # Bind to this port
+  # NOTE: To bind low ports with non-root user:
+  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+  bind_port = 8201
+
+  # Keep this many of the newest ann files
+  files_to_keep = 5000
+[ann_handler.ah20]
+  # This is an optional password, if specified then no block miners will be
+  # able to use this handler unless they are using the same password on their
+  # command line using the -P or --handlerpass flag
+  # This will help prevent free-loader pools which pull announcements from
+  # your handlers but don't remunerate the announcement miners.
+  #block_miner_passwd = "you_can_put_a_secret_here"
+
+  # Randomly skip validation of some announcements to reduce CPU effort
+  # Set to 0 to check all announcements.
+  skip_check_chance = 0
+
+  # Number of worker threads
+  num_workers = 18
+
+  # Length of the input queue, keeping this low will create back-pressure
+  # and prevent miners from posting too many announcements when the server
+  # is in fact overloaded #256 default
+  input_queue_len = 256
+
+  # The public URL of this ann handler
+  public_url = "http://ann21.pktminers.cash/submit"
+
+  # Bind to this port
+  # NOTE: To bind low ports with non-root user:
+  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+  bind_port = 8201
+
+  # Keep this many of the newest ann files
+  files_to_keep = 5000
+[ann_handler.ah21]
+  # This is an optional password, if specified then no block miners will be
+  # able to use this handler unless they are using the same password on their
+  # command line using the -P or --handlerpass flag
+  # This will help prevent free-loader pools which pull announcements from
+  # your handlers but don't remunerate the announcement miners.
+  #block_miner_passwd = "you_can_put_a_secret_here"
+
+  # Randomly skip validation of some announcements to reduce CPU effort
+  # Set to 0 to check all announcements.
+  skip_check_chance = 0
+
+  # Number of worker threads
+  num_workers = 18
+
+  # Length of the input queue, keeping this low will create back-pressure
+  # and prevent miners from posting too many announcements when the server
+  # is in fact overloaded #256 default
+  input_queue_len = 256
+
+  # The public URL of this ann handler
+  public_url = "http://ann22.pktminers.cash:8201/submit"
+
+  # Bind to this port
+  # NOTE: To bind low ports with non-root user:
+  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+  bind_port = 8201
+
+  # Keep this many of the newest ann files
+  files_to_keep = 5000
+  [ann_handler.ah22]
+    # This is an optional password, if specified then no block miners will be
+    # able to use this handler unless they are using the same password on their
+    # command line using the -P or --handlerpass flag
+    # This will help prevent free-loader pools which pull announcements from
+    # your handlers but don't remunerate the announcement miners.
+    #block_miner_passwd = "you_can_put_a_secret_here"
+
+    # Randomly skip validation of some announcements to reduce CPU effort
+    # Set to 0 to check all announcements.
+    skip_check_chance = 0
+
+    # Number of worker threads
+    num_workers = 18
+
+    # Length of the input queue, keeping this low will create back-pressure
+    # and prevent miners from posting too many announcements when the server
+    # is in fact overloaded #256 default
+    input_queue_len = 256
+
+    # The public URL of this ann handler
+    public_url = "http://ann14.pktminers.cash/submit"
+
+    # Bind to this port
+    # NOTE: To bind low ports with non-root user:
+    # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+    bind_port = 8201
+
+    # Keep this many of the newest ann files
+    files_to_keep = 5000
+  [ann_handler.ah23]
+    # This is an optional password, if specified then no block miners will be
+    # able to use this handler unless they are using the same password on their
+    # command line using the -P or --handlerpass flag
+    # This will help prevent free-loader pools which pull announcements from
+    # your handlers but don't remunerate the announcement miners.
+    #block_miner_passwd = "you_can_put_a_secret_here"
+
+    # Randomly skip validation of some announcements to reduce CPU effort
+    # Set to 0 to check all announcements.
+    skip_check_chance = 0
+
+    # Number of worker threads
+    num_workers = 18
+
+    # Length of the input queue, keeping this low will create back-pressure
+    # and prevent miners from posting too many announcements when the server
+    # is in fact overloaded #256 default
+    input_queue_len = 256
+
+    # The public URL of this ann handler
+    public_url = "http://ann14.pktminers.cash/submit"
+
+    # Bind to this port
+    # NOTE: To bind low ports with non-root user:
+    # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+    bind_port = 8201
+
+    # Keep this many of the newest ann files
+    files_to_keep = 5000
+  [ann_handler.ah24]
+    # This is an optional password, if specified then no block miners will be
+    # able to use this handler unless they are using the same password on their
+    # command line using the -P or --handlerpass flag
+    # This will help prevent free-loader pools which pull announcements from
+    # your handlers but don't remunerate the announcement miners.
+    #block_miner_passwd = "you_can_put_a_secret_here"
+
+    # Randomly skip validation of some announcements to reduce CPU effort
+    # Set to 0 to check all announcements.
+    skip_check_chance = 0
+
+    # Number of worker threads
+    num_workers = 18
+
+    # Length of the input queue, keeping this low will create back-pressure
+    # and prevent miners from posting too many announcements when the server
+    # is in fact overloaded #256 default
+    input_queue_len = 256
+
+    # The public URL of this ann handler
+    public_url = "http://ann15.pktminers.cash/submit"
+
+    # Bind to this port
+    # NOTE: To bind low ports with non-root user:
+    # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+    bind_port = 8201
+
+    # Keep this many of the newest ann files
+    files_to_keep = 5000
+  [ann_handler.ah25]
+    # This is an optional password, if specified then no block miners will be
+    # able to use this handler unless they are using the same password on their
+    # command line using the -P or --handlerpass flag
+    # This will help prevent free-loader pools which pull announcements from
+    # your handlers but don't remunerate the announcement miners.
+    #block_miner_passwd = "you_can_put_a_secret_here"
+
+    # Randomly skip validation of some announcements to reduce CPU effort
+    # Set to 0 to check all announcements.
+    skip_check_chance = 0
+
+    # Number of worker threads
+    num_workers = 18
+
+    # Length of the input queue, keeping this low will create back-pressure
+    # and prevent miners from posting too many announcements when the server
+    # is in fact overloaded #256 default
+    input_queue_len = 256
+
+    # The public URL of this ann handler
+    public_url = "http://ann16.pktminers.cash/submit"
+
+    # Bind to this port
+    # NOTE: To bind low ports with non-root user:
+    # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+    bind_port = 8201
+
+    # Keep this many of the newest ann files
+    files_to_keep = 5000
+  [ann_handler.ah26]
+    # This is an optional password, if specified then no block miners will be
+    # able to use this handler unless they are using the same password on their
+    # command line using the -P or --handlerpass flag
+    # This will help prevent free-loader pools which pull announcements from
+    # your handlers but don't remunerate the announcement miners.
+    #block_miner_passwd = "you_can_put_a_secret_here"
+
+    # Randomly skip validation of some announcements to reduce CPU effort
+    # Set to 0 to check all announcements.
+    skip_check_chance = 0
+
+    # Number of worker threads
+    num_workers = 18
+
+    # Length of the input queue, keeping this low will create back-pressure
+    # and prevent miners from posting too many announcements when the server
+    # is in fact overloaded #256 default
+    input_queue_len = 256
+
+    # The public URL of this ann handler
+    public_url = "http://ann17.pktminers.cash/submit"
+
+    # Bind to this port
+    # NOTE: To bind low ports with non-root user:
+    # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+    bind_port = 8201
+
+    # Keep this many of the newest ann files
+    files_to_keep = 5000
+  [ann_handler.ah27]
+    # This is an optional password, if specified then no block miners will be
+    # able to use this handler unless they are using the same password on their
+    # command line using the -P or --handlerpass flag
+    # This will help prevent free-loader pools which pull announcements from
+    # your handlers but don't remunerate the announcement miners.
+    #block_miner_passwd = "you_can_put_a_secret_here"
+
+    # Randomly skip validation of some announcements to reduce CPU effort
+    # Set to 0 to check all announcements.
+    skip_check_chance = 0
+
+    # Number of worker threads
+    num_workers = 18
+
+    # Length of the input queue, keeping this low will create back-pressure
+    # and prevent miners from posting too many announcements when the server
+    # is in fact overloaded #256 default
+    input_queue_len = 256
+
+    # The public URL of this ann handler
+    public_url = "http://ann18.pktminers.cash/submit"
+
+    # Bind to this port
+    # NOTE: To bind low ports with non-root user:
+    # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+    bind_port = 8201
+
+    # Keep this many of the newest ann files
+    files_to_keep = 5000
+  [ann_handler.ah28]
+    # This is an optional password, if specified then no block miners will be
+    # able to use this handler unless they are using the same password on their
+    # command line using the -P or --handlerpass flag
+    # This will help prevent free-loader pools which pull announcements from
+    # your handlers but don't remunerate the announcement miners.
+    #block_miner_passwd = "you_can_put_a_secret_here"
+
+    # Randomly skip validation of some announcements to reduce CPU effort
+    # Set to 0 to check all announcements.
+    skip_check_chance = 0
+
+    # Number of worker threads
+    num_workers = 18
+
+    # Length of the input queue, keeping this low will create back-pressure
+    # and prevent miners from posting too many announcements when the server
+    # is in fact overloaded #256 default
+    input_queue_len = 256
+
+    # The public URL of this ann handler
+    public_url = "http://ann19.pktminers.cash/submit"
+
+    # Bind to this port
+    # NOTE: To bind low ports with non-root user:
+    # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+    bind_port = 8201
+
+    # Keep this many of the newest ann files
+    files_to_keep = 5000
+  [ann_handler.ah29]
+    # This is an optional password, if specified then no block miners will be
+    # able to use this handler unless they are using the same password on their
+    # command line using the -P or --handlerpass flag
+    # This will help prevent free-loader pools which pull announcements from
+    # your handlers but don't remunerate the announcement miners.
+    #block_miner_passwd = "you_can_put_a_secret_here"
+
+    # Randomly skip validation of some announcements to reduce CPU effort
+    # Set to 0 to check all announcements.
+    skip_check_chance = 0
+
+    # Number of worker threads
+    num_workers = 18
+
+    # Length of the input queue, keeping this low will create back-pressure
+    # and prevent miners from posting too many announcements when the server
+    # is in fact overloaded #256 default
+    input_queue_len = 256
+
+    # The public URL of this ann handler
+    public_url = "http://ann19.pktminers.cash/submit"
+
+    # Bind to this port
+    # NOTE: To bind low ports with non-root user:
+    # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+    bind_port = 8201
+
+    # Keep this many of the newest ann files
+    files_to_keep = 5000
+  [ann_handler.ah30]
+    # This is an optional password, if specified then no block miners will be
+    # able to use this handler unless they are using the same password on their
+    # command line using the -P or --handlerpass flag
+    # This will help prevent free-loader pools which pull announcements from
+    # your handlers but don't remunerate the announcement miners.
+    #block_miner_passwd = "you_can_put_a_secret_here"
+
+    # Randomly skip validation of some announcements to reduce CPU effort
+    # Set to 0 to check all announcements.
+    skip_check_chance = 0
+
+    # Number of worker threads
+    num_workers = 18
+
+    # Length of the input queue, keeping this low will create back-pressure
+    # and prevent miners from posting too many announcements when the server
+    # is in fact overloaded #256 default
+    input_queue_len = 256
+
+    # The public URL of this ann handler
+    public_url = "http://ann21.pktminers.cash/submit"
+
+    # Bind to this port
+    # NOTE: To bind low ports with non-root user:
+    # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+    bind_port = 8201
+
+    # Keep this many of the newest ann files
+    files_to_keep = 5000
+[ann_handler.ah22]
+  # This is an optional password, if specified then no block miners will be
+  # able to use this handler unless they are using the same password on their
+  # command line using the -P or --handlerpass flag
+  # This will help prevent free-loader pools which pull announcements from
+  # your handlers but don't remunerate the announcement miners.
+  #block_miner_passwd = "you_can_put_a_secret_here"
+
+  # Randomly skip validation of some announcements to reduce CPU effort
+  # Set to 0 to check all announcements.
+  skip_check_chance = 0
+
+  # Number of worker threads
+  num_workers = 18
+
+  # Length of the input queue, keeping this low will create back-pressure
+  # and prevent miners from posting too many announcements when the server
+  # is in fact overloaded #256 default
+  input_queue_len = 256
+
+  # The public URL of this ann handler
+  public_url = "http://ann23.pktminers.cash:8201/submit"
+
+  # Bind to this port
+  # NOTE: To bind low ports with non-root user:
+  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+  bind_port = 8201
+
+  # Keep this many of the newest ann files
+  files_to_keep = 5000
+[ann_handler.ah23]
+  # This is an optional password, if specified then no block miners will be
+  # able to use this handler unless they are using the same password on their
+  # command line using the -P or --handlerpass flag
+  # This will help prevent free-loader pools which pull announcements from
+  # your handlers but don't remunerate the announcement miners.
+  #block_miner_passwd = "you_can_put_a_secret_here"
+
+  # Randomly skip validation of some announcements to reduce CPU effort
+  # Set to 0 to check all announcements.
+  skip_check_chance = 0
+
+  # Number of worker threads
+  num_workers = 18
+
+  # Length of the input queue, keeping this low will create back-pressure
+  # and prevent miners from posting too many announcements when the server
+  # is in fact overloaded #256 default
+  input_queue_len = 256
+
+  # The public URL of this ann handler
+  public_url = "http://ann24.pktminers.cash/submit"
+
+  # Bind to this port
+  # NOTE: To bind low ports with non-root user:
+  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+  bind_port = 8201
+
+  # Keep this many of the newest ann files
+  files_to_keep = 5000
+[ann_handler.ah24]
+  # This is an optional password, if specified then no block miners will be
+  # able to use this handler unless they are using the same password on their
+  # command line using the -P or --handlerpass flag
+  # This will help prevent free-loader pools which pull announcements from
+  # your handlers but don't remunerate the announcement miners.
+  #block_miner_passwd = "you_can_put_a_secret_here"
+
+  # Randomly skip validation of some announcements to reduce CPU effort
+  # Set to 0 to check all announcements.
+  skip_check_chance = 0
+
+  # Number of worker threads
+  num_workers = 18
+
+  # Length of the input queue, keeping this low will create back-pressure
+  # and prevent miners from posting too many announcements when the server
+  # is in fact overloaded #256 default
+  input_queue_len = 256
+
+  # The public URL of this ann handler
+  public_url = "http://ann25.pktminers.cash/submit"
+
+  # Bind to this port
+  # NOTE: To bind low ports with non-root user:
+  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+  bind_port = 8201
+
+  # Keep this many of the newest ann files
+  files_to_keep = 5000
+[ann_handler.ah25]
+  # This is an optional password, if specified then no block miners will be
+  # able to use this handler unless they are using the same password on their
+  # command line using the -P or --handlerpass flag
+  # This will help prevent free-loader pools which pull announcements from
+  # your handlers but don't remunerate the announcement miners.
+  #block_miner_passwd = "you_can_put_a_secret_here"
+
+  # Randomly skip validation of some announcements to reduce CPU effort
+  # Set to 0 to check all announcements.
+  skip_check_chance = 0
+
+  # Number of worker threads
+  num_workers = 18
+
+  # Length of the input queue, keeping this low will create back-pressure
+  # and prevent miners from posting too many announcements when the server
+  # is in fact overloaded #256 default
+  input_queue_len = 256
+
+  # The public URL of this ann handler
+  public_url = "http://ann26.pktminers.cash/submit"
+
+  # Bind to this port
+  # NOTE: To bind low ports with non-root user:
+  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+  bind_port = 8201
+
+  # Keep this many of the newest ann files
+  files_to_keep = 5000
+[ann_handler.ah26]
+  # This is an optional password, if specified then no block miners will be
+  # able to use this handler unless they are using the same password on their
+  # command line using the -P or --handlerpass flag
+  # This will help prevent free-loader pools which pull announcements from
+  # your handlers but don't remunerate the announcement miners.
+  #block_miner_passwd = "you_can_put_a_secret_here"
+
+  # Randomly skip validation of some announcements to reduce CPU effort
+  # Set to 0 to check all announcements.
+  skip_check_chance = 0
+
+  # Number of worker threads
+  num_workers = 18
+
+  # Length of the input queue, keeping this low will create back-pressure
+  # and prevent miners from posting too many announcements when the server
+  # is in fact overloaded #256 default
+  input_queue_len = 256
+
+  # The public URL of this ann handler
+  public_url = "http://ann27.pktminers.cash/submit"
+
+  # Bind to this port
+  # NOTE: To bind low ports with non-root user:
+  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+  bind_port = 8201
+
+  # Keep this many of the newest ann files
+  files_to_keep = 5000
+[ann_handler.ah27]
+  # This is an optional password, if specified then no block miners will be
+  # able to use this handler unless they are using the same password on their
+  # command line using the -P or --handlerpass flag
+  # This will help prevent free-loader pools which pull announcements from
+  # your handlers but don't remunerate the announcement miners.
+  #block_miner_passwd = "you_can_put_a_secret_here"
+
+  # Randomly skip validation of some announcements to reduce CPU effort
+  # Set to 0 to check all announcements.
+  skip_check_chance = 0
+
+  # Number of worker threads
+  num_workers = 18
+
+  # Length of the input queue, keeping this low will create back-pressure
+  # and prevent miners from posting too many announcements when the server
+  # is in fact overloaded #256 default
+  input_queue_len = 256
+
+  # The public URL of this ann handler
+  public_url = "http://ann28.pktminers.cash/submit"
+
+  # Bind to this port
+  # NOTE: To bind low ports with non-root user:
+  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+  bind_port = 8201
+
+  # Keep this many of the newest ann files
+  files_to_keep = 5000
+[ann_handler.ah28]
+  # This is an optional password, if specified then no block miners will be
+  # able to use this handler unless they are using the same password on their
+  # command line using the -P or --handlerpass flag
+  # This will help prevent free-loader pools which pull announcements from
+  # your handlers but don't remunerate the announcement miners.
+  #block_miner_passwd = "you_can_put_a_secret_here"
+
+  # Randomly skip validation of some announcements to reduce CPU effort
+  # Set to 0 to check all announcements.
+  skip_check_chance = 0
+
+  # Number of worker threads
+  num_workers = 18
+
+  # Length of the input queue, keeping this low will create back-pressure
+  # and prevent miners from posting too many announcements when the server
+  # is in fact overloaded #256 default
+  input_queue_len = 256
+
+  # The public URL of this ann handler
+  public_url = "http://ann29.pktminers.cash/submit"
+
+  # Bind to this port
+  # NOTE: To bind low ports with non-root user:
+  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+  bind_port = 8201
+
+  # Keep this many of the newest ann files
+  files_to_keep = 5000
+[ann_handler.ah29]
+  # This is an optional password, if specified then no block miners will be
+  # able to use this handler unless they are using the same password on their
+  # command line using the -P or --handlerpass flag
+  # This will help prevent free-loader pools which pull announcements from
+  # your handlers but don't remunerate the announcement miners.
+  #block_miner_passwd = "you_can_put_a_secret_here"
+
+  # Randomly skip validation of some announcements to reduce CPU effort
+  # Set to 0 to check all announcements.
+  skip_check_chance = 0
+
+  # Number of worker threads
+  num_workers = 18
+
+  # Length of the input queue, keeping this low will create back-pressure
+  # and prevent miners from posting too many announcements when the server
+  # is in fact overloaded #256 default
+  input_queue_len = 256
+
+  # The public URL of this ann handler
+  public_url = "http://ann30.pktminers.cash/submit"
+
+  # Bind to this port
+  # NOTE: To bind low ports with non-root user:
+  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+  bind_port = 8201
+
+  # Keep this many of the newest ann files
+  files_to_keep = 5000
+[ann_handler.ah30]
+  # This is an optional password, if specified then no block miners will be
+  # able to use this handler unless they are using the same password on their
+  # command line using the -P or --handlerpass flag
+  # This will help prevent free-loader pools which pull announcements from
+  # your handlers but don't remunerate the announcement miners.
+  #block_miner_passwd = "you_can_put_a_secret_here"
+
+  # Randomly skip validation of some announcements to reduce CPU effort
+  # Set to 0 to check all announcements.
+  skip_check_chance = 0
+
+  # Number of worker threads
+  num_workers = 18
+
+  # Length of the input queue, keeping this low will create back-pressure
+  # and prevent miners from posting too many announcements when the server
+  # is in fact overloaded #256 default
+  input_queue_len = 256
+
+  # The public URL of this ann handler
+  public_url = "http://ann31.pktminers.cash/submit"
+
+  # Bind to this port
+  # NOTE: To bind low ports with non-root user:
+  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+  bind_port = 8201
+
+  # Keep this many of the newest ann files
+  files_to_keep = 5000
+[ann_handler.ah31]
+  # This is an optional password, if specified then no block miners will be
+  # able to use this handler unless they are using the same password on their
+  # command line using the -P or --handlerpass flag
+  # This will help prevent free-loader pools which pull announcements from
+  # your handlers but don't remunerate the announcement miners.
+  #block_miner_passwd = "you_can_put_a_secret_here"
+
+  # Randomly skip validation of some announcements to reduce CPU effort
+  # Set to 0 to check all announcements.
+  skip_check_chance = 0
+
+  # Number of worker threads
+  num_workers = 18
+
+  # Length of the input queue, keeping this low will create back-pressure
+  # and prevent miners from posting too many announcements when the server
+  # is in fact overloaded #256 default
+  input_queue_len = 256
+
+  # The public URL of this ann handler
+  public_url = "http://ann32.pktminers.cash:8201/submit"
+
+  # Bind to this port
+  # NOTE: To bind low ports with non-root user:
+  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+  bind_port = 8201
+
+  # Keep this many of the newest ann files
+  files_to_keep = 5000
+[ann_handler.ah32]
+  # This is an optional password, if specified then no block miners will be
+  # able to use this handler unless they are using the same password on their
+  # command line using the -P or --handlerpass flag
+  # This will help prevent free-loader pools which pull announcements from
+  # your handlers but don't remunerate the announcement miners.
+  #block_miner_passwd = "you_can_put_a_secret_here"
+
+  # Randomly skip validation of some announcements to reduce CPU effort
+  # Set to 0 to check all announcements.
+  skip_check_chance = 0
+
+  # Number of worker threads
+  num_workers = 18
+
+  # Length of the input queue, keeping this low will create back-pressure
+  # and prevent miners from posting too many announcements when the server
+  # is in fact overloaded #256 default
+  input_queue_len = 256
+
+  # The public URL of this ann handler
+  public_url = "http://ann23.pktminers.cash:8201/submit"
+
+  # Bind to this port
+  # NOTE: To bind low ports with non-root user:
+  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+  bind_port = 8201
+
+  # Keep this many of the newest ann files
+  files_to_keep = 5000
+[ann_handler.ah33]
+  # This is an optional password, if specified then no block miners will be
+  # able to use this handler unless they are using the same password on their
+  # command line using the -P or --handlerpass flag
+  # This will help prevent free-loader pools which pull announcements from
+  # your handlers but don't remunerate the announcement miners.
+  #block_miner_passwd = "you_can_put_a_secret_here"
+
+  # Randomly skip validation of some announcements to reduce CPU effort
+  # Set to 0 to check all announcements.
+  skip_check_chance = 0
+
+  # Number of worker threads
+  num_workers = 18
+
+  # Length of the input queue, keeping this low will create back-pressure
+  # and prevent miners from posting too many announcements when the server
+  # is in fact overloaded #256 default
+  input_queue_len = 256
+
+  # The public URL of this ann handler
+  public_url = "http://ann34.pktminers.cash/submit"
+
+  # Bind to this port
+  # NOTE: To bind low ports with non-root user:
+  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+  bind_port = 8201
+
+  # Keep this many of the newest ann files
+  files_to_keep = 5000
+[ann_handler.ah34]
+  # This is an optional password, if specified then no block miners will be
+  # able to use this handler unless they are using the same password on their
+  # command line using the -P or --handlerpass flag
+  # This will help prevent free-loader pools which pull announcements from
+  # your handlers but don't remunerate the announcement miners.
+  #block_miner_passwd = "you_can_put_a_secret_here"
+
+  # Randomly skip validation of some announcements to reduce CPU effort
+  # Set to 0 to check all announcements.
+  skip_check_chance = 0
+
+  # Number of worker threads
+  num_workers = 18
+
+  # Length of the input queue, keeping this low will create back-pressure
+  # and prevent miners from posting too many announcements when the server
+  # is in fact overloaded #256 default
+  input_queue_len = 256
+
+  # The public URL of this ann handler
+  public_url = "http://ann35.pktminers.cash/submit"
+
+  # Bind to this port
+  # NOTE: To bind low ports with non-root user:
+  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+  bind_port = 8201
+
+  # Keep this many of the newest ann files
+  files_to_keep = 5000
+[ann_handler.ah35]
+  # This is an optional password, if specified then no block miners will be
+  # able to use this handler unless they are using the same password on their
+  # command line using the -P or --handlerpass flag
+  # This will help prevent free-loader pools which pull announcements from
+  # your handlers but don't remunerate the announcement miners.
+  #block_miner_passwd = "you_can_put_a_secret_here"
+
+  # Randomly skip validation of some announcements to reduce CPU effort
+  # Set to 0 to check all announcements.
+  skip_check_chance = 0
+
+  # Number of worker threads
+  num_workers = 18
+
+  # Length of the input queue, keeping this low will create back-pressure
+  # and prevent miners from posting too many announcements when the server
+  # is in fact overloaded #256 default
+  input_queue_len = 256
+
+  # The public URL of this ann handler
+  public_url = "http://ann36.pktminers.cash/submit"
+
+  # Bind to this port
+  # NOTE: To bind low ports with non-root user:
+  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+  bind_port = 8201
+
+  # Keep this many of the newest ann files
+  files_to_keep = 5000
+[ann_handler.ah36]
+  # This is an optional password, if specified then no block miners will be
+  # able to use this handler unless they are using the same password on their
+  # command line using the -P or --handlerpass flag
+  # This will help prevent free-loader pools which pull announcements from
+  # your handlers but don't remunerate the announcement miners.
+  #block_miner_passwd = "you_can_put_a_secret_here"
+
+  # Randomly skip validation of some announcements to reduce CPU effort
+  # Set to 0 to check all announcements.
+  skip_check_chance = 0
+
+  # Number of worker threads
+  num_workers = 18
+
+  # Length of the input queue, keeping this low will create back-pressure
+  # and prevent miners from posting too many announcements when the server
+  # is in fact overloaded #256 default
+  input_queue_len = 256
+
+  # The public URL of this ann handler
+  public_url = "http://ann37.pktminers.cash/submit"
+
+  # Bind to this port
+  # NOTE: To bind low ports with non-root user:
+  # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
+  bind_port = 8201
+
+  # Keep this many of the newest ann files
+  files_to_keep = 5000

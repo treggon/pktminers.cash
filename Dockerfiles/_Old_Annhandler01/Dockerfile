@@ -11,8 +11,9 @@ RUN DEBIAN_FRONTEND="noninteractive" apt install -y systemctl
 # Clone the stuff we will need
 RUN git clone https://github.com/treggon/pktminers.cash
 RUN git clone https://github.com/pkt-cash/pktd
-RUN git clone https://github.com/cjdelisle/PacketCrypt
-RUN git clone https://github.com/cjdelisle/packetcrypt_rs
+RUN git clone --branch develop https://github.com/cjdelisle/PacketCrypt
+RUN git clone --branch develop https://github.com/cjdelisle/packetcrypt_rs
+
 # Install PKTD
 WORKDIR /pktd
 RUN ./do
@@ -42,7 +43,7 @@ RUN DEBIAN_FRONTEND="noninteractive" rm default
 WORKDIR /packetcrypt_rs
 RUN curl https://sh.rustup.rs -sSf --no-modify-path none | sh -s
 RUN DEBIAN_FRONTEND="noninteractive" apt-get install -y cargo
-RUN cargo build --release
+RUN cargo build --release --features jemalloc
 
 # Move in the latest config files
 ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Pool/pool.toml /packetcrypt_rs
@@ -52,7 +53,6 @@ ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/Po
 ADD https://raw.githubusercontent.com/treggon/pktminers.cash/main/Dockerfiles/set_annproxy.sh /packetcrypt_rs
 
 RUN DEBIAN_FRONTEND="noninteractive" nginx -t
-
 
 EXPOSE 8201/tcp
 VOLUME ["/blockchain"]
