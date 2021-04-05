@@ -28,15 +28,15 @@ root_workdir = "./datastore/pool"
     input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann01.pktminers.cash"
+    public_url = "http://ann01.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
     # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-    bind_pub = "172.20.1.84:80"
+    bind_pub = "0.0.0.0:420"
 
     # Bind this port for the sprayer component, this should be on your local network
-    bind_pvt = "172.20.1.84:6666"
+    bind_pvt = "0.0.0.0:6666"
 
     # How many threads to occupy with running sprayer
     spray_workers = 8
@@ -67,15 +67,15 @@ root_workdir = "./datastore/pool"
     input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann02.pktminers.cash"
+    public_url = "http://ann02.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
     # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-    bind_pub = "172.20.1.67:80"
+    bind_pub = "0.0.0.0:420"
 
     # Bind this port for the sprayer component, this should be on your local network
-    bind_pvt = "172.20.1.67:6666"
+    bind_pvt = "0.0.0.0:6666"
 
     # How many threads to occupy with running sprayer
     spray_workers = 8
@@ -106,15 +106,15 @@ root_workdir = "./datastore/pool"
     input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann03.pktminers.cash"
+    public_url = "http://ann03.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
     # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-    bind_pub = "172.20.1.68:80"
+    bind_pub = "0.0.0.0:420"
 
     # Bind this port for the sprayer component, this should be on your local network
-    bind_pvt = "172.20.1.68:6666"
+    bind_pvt = "0.0.0.0:6666"
 
     # How many threads to occupy with running sprayer
     spray_workers = 8
@@ -145,15 +145,15 @@ root_workdir = "./datastore/pool"
     input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann04.pktminers.cash"
+    public_url = "http://ann04.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
     # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-    bind_pub = "172.20.1.69:80"
+    bind_pub = "0.0.0.0:420"
 
     # Bind this port for the sprayer component, this should be on your local network
-    bind_pvt = "172.20.1.69:6666"
+    bind_pvt = "0.0.0.0:6666"
 
     # How many threads to occupy with running sprayer
     spray_workers = 8
@@ -184,15 +184,15 @@ root_workdir = "./datastore/pool"
     input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann05.pktminers.cash"
+    public_url = "http://ann05.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
     # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-    bind_pub = "172.20.1.70:80"
+    bind_pub = "0.0.0.0:420"
 
     # Bind this port for the sprayer component, this should be on your local network
-    bind_pvt = "172.20.1.70:6666"
+    bind_pvt = "0.0.0.0:6666"
 
     # How many threads to occupy with running sprayer
     spray_workers = 8
@@ -223,15 +223,15 @@ root_workdir = "./datastore/pool"
     input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann06.pktminers.cash"
+    public_url = "http://ann06.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
     # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-    bind_pub = "172.20.1.71:80"
+    bind_pub = "0.0.0.0:420"
 
     # Bind this port for the sprayer component, this should be on your local network
-    bind_pvt = "172.20.1.71:6666"
+    bind_pvt = "0.0.0.0:6666"
 
     # How many threads to occupy with running sprayer
     spray_workers = 8
@@ -262,15 +262,15 @@ root_workdir = "./datastore/pool"
     input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann07.pktminers.cash"
+    public_url = "http://ann07.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
     # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-    bind_pub = "172.20.1.72:80"
+    bind_pub = "0.0.0.0:420"
 
     # Bind this port for the sprayer component, this should be on your local network
-    bind_pvt = "172.20.1.72:6666"
+    bind_pvt = "0.0.0.0:6666"
 
     # How many threads to occupy with running sprayer
     spray_workers = 8
@@ -301,15 +301,15 @@ root_workdir = "./datastore/pool"
     input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann08.pktminers.cash"
+    public_url = "http://ann08.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
     # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-    bind_pub = "172.20.1.73:80"
+    bind_pub = "0.0.0.0:420"
 
     # Bind this port for the sprayer component, this should be on your local network
-    bind_pvt = "172.20.1.73:6666"
+    bind_pvt = "0.0.0.0:6666"
 
     # How many threads to occupy with running sprayer
     spray_workers = 8
@@ -340,15 +340,15 @@ root_workdir = "./datastore/pool"
     input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann09.pktminers.cash"
+    public_url = "http://ann09.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
     # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-    bind_pub = "172.20.1.74:80"
+    bind_pub = "0.0.0.0:420"
 
     # Bind this port for the sprayer component, this should be on your local network
-    bind_pvt = "172.20.1.74:6666"
+    bind_pvt = "0.0.0.0:6666"
 
     # How many threads to occupy with running sprayer
     spray_workers = 8
@@ -379,15 +379,15 @@ root_workdir = "./datastore/pool"
     input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann10.pktminers.cash"
+    public_url = "http://ann10.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
     # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-    bind_pub = "172.20.1.75:80"
+    bind_pub = "0.0.0.0:420"
 
     # Bind this port for the sprayer component, this should be on your local network
-    bind_pvt = "172.20.1.75:6666"
+    bind_pvt = "0.0.0.0:6666"
 
     # How many threads to occupy with running sprayer
     spray_workers = 8
@@ -419,15 +419,15 @@ root_workdir = "./datastore/pool"
     input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann11.pktminers.cash"
+    public_url = "http://ann11.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
     # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-    bind_pub = "172.20.1.76:80"
+    bind_pub = "0.0.0.0:420"
 
     # Bind this port for the sprayer component, this should be on your local network
-    bind_pvt = "172.20.1.76:6666"
+    bind_pvt = "0.0.0.0:6666"
 
     # How many threads to occupy with running sprayer
     spray_workers = 8
@@ -458,15 +458,15 @@ root_workdir = "./datastore/pool"
     input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann12.pktminers.cash"
+    public_url = "http://ann12.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
     # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-    bind_pub = "172.20.1.77:80"
+    bind_pub = "0.0.0.0:420"
 
     # Bind this port for the sprayer component, this should be on your local network
-    bind_pvt = "172.20.1.77:6666"
+    bind_pvt = "0.0.0.0:6666"
 
     # How many threads to occupy with running sprayer
     spray_workers = 8
@@ -497,15 +497,15 @@ root_workdir = "./datastore/pool"
     input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann13.pktminers.cash"
+    public_url = "http://ann13.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
     # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-    bind_pub = "172.20.1.78:80"
+    bind_pub = "0.0.0.0:420"
 
     # Bind this port for the sprayer component, this should be on your local network
-    bind_pvt = "172.20.1.78:6666"
+    bind_pvt = "0.0.0.0:6666"
 
     # How many threads to occupy with running sprayer
     spray_workers = 8
@@ -536,15 +536,15 @@ root_workdir = "./datastore/pool"
     input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann14.pktminers.cash"
+    public_url = "http://ann14.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
     # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-    bind_pub = "172.20.1.79:80"
+    bind_pub = "0.0.0.0:420"
 
     # Bind this port for the sprayer component, this should be on your local network
-    bind_pvt = "172.20.1.79:6666"
+    bind_pvt = "0.0.0.0:6666"
 
     # How many threads to occupy with running sprayer
     spray_workers = 8
@@ -575,15 +575,15 @@ root_workdir = "./datastore/pool"
     input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann15.pktminers.cash"
+    public_url = "http://ann15.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
     # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-    bind_pub = "172.20.1.80:80"
+    bind_pub = "0.0.0.0:420"
 
     # Bind this port for the sprayer component, this should be on your local network
-    bind_pvt = "172.20.1.80:6666"
+    bind_pvt = "0.0.0.0:6666"
 
     # How many threads to occupy with running sprayer
     spray_workers = 8
@@ -614,15 +614,15 @@ root_workdir = "./datastore/pool"
     input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann16.pktminers.cash"
+    public_url = "http://ann16.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
     # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-    bind_pub = "172.20.1.81:80"
+    bind_pub = "0.0.0.0:420"
 
     # Bind this port for the sprayer component, this should be on your local network
-    bind_pvt = "172.20.1.81:6666"
+    bind_pvt = "0.0.0.0:6666"
 
     # How many threads to occupy with running sprayer
     spray_workers = 8
@@ -653,15 +653,15 @@ root_workdir = "./datastore/pool"
     input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann17.pktminers.cash"
+    public_url = "http://ann17.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
     # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-    bind_pub = "172.20.1.82:80"
+    bind_pub = "0.0.0.0:420"
 
     # Bind this port for the sprayer component, this should be on your local network
-    bind_pvt = "172.20.1.82:6666"
+    bind_pvt = "0.0.0.0:6666"
 
     # How many threads to occupy with running sprayer
     spray_workers = 8
@@ -692,15 +692,15 @@ root_workdir = "./datastore/pool"
     input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann18.pktminers.cash"
+    public_url = "http://ann18.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
     # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-    bind_pub = "172.20.1.83:80"
+    bind_pub = "0.0.0.0:420"
 
     # Bind this port for the sprayer component, this should be on your local network
-    bind_pvt = "172.20.1.83:6666"
+    bind_pvt = "0.0.0.0:6666"
 
     # How many threads to occupy with running sprayer
     spray_workers = 8
@@ -732,15 +732,15 @@ root_workdir = "./datastore/pool"
     input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann19.pktminers.cash"
+    public_url = "http://ann19.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
     # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-    bind_pub = "172.20.1.86:80"
+    bind_pub = "0.0.0.0:420"
 
     # Bind this port for the sprayer component, this should be on your local network
-    bind_pvt = "172.20.1.86:6666"
+    bind_pvt = "0.0.0.0:6666"
 
     # How many threads to occupy with running sprayer
     spray_workers = 8
@@ -771,15 +771,15 @@ root_workdir = "./datastore/pool"
     input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann20.pktminers.cash"
+    public_url = "http://ann20.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
     # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-    bind_pub = "172.20.1.87:80"
+    bind_pub = "0.0.0.0:420"
 
     # Bind this port for the sprayer component, this should be on your local network
-    bind_pvt = "172.20.1.87:6666"
+    bind_pvt = "0.0.0.0:6666"
 
     # How many threads to occupy with running sprayer
     spray_workers = 8
@@ -811,15 +811,15 @@ root_workdir = "./datastore/pool"
     input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann21.pktminers.cash"
+    public_url = "http://ann21.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
     # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-    bind_pub = "172.20.1.88:80"
+    bind_pub = "0.0.0.0:420"
 
     # Bind this port for the sprayer component, this should be on your local network
-    bind_pvt = "172.20.1.88:6666"
+    bind_pvt = "0.0.0.0:6666"
 
     # How many threads to occupy with running sprayer
     spray_workers = 8
@@ -850,15 +850,15 @@ root_workdir = "./datastore/pool"
     input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann22.pktminers.cash"
+    public_url = "http://ann22.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
     # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-    bind_pub = "172.20.1.89:80"
+    bind_pub = "0.0.0.0:420"
 
     # Bind this port for the sprayer component, this should be on your local network
-    bind_pvt = "172.20.1.89:6666"
+    bind_pvt = "0.0.0.0:6666"
 
     # How many threads to occupy with running sprayer
     spray_workers = 8
@@ -889,15 +889,15 @@ root_workdir = "./datastore/pool"
     input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann23.pktminers.cash"
+    public_url = "http://ann23.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
     # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-    bind_pub = "172.20.1.90:80"
+    bind_pub = "0.0.0.0:420"
 
     # Bind this port for the sprayer component, this should be on your local network
-    bind_pvt = "172.20.1.90:6666"
+    bind_pvt = "0.0.0.0:6666"
 
     # How many threads to occupy with running sprayer
     spray_workers = 8
@@ -928,15 +928,15 @@ root_workdir = "./datastore/pool"
     input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann24.pktminers.cash"
+    public_url = "http://ann24.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
     # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-    bind_pub = "172.20.1.91:80"
+    bind_pub = "0.0.0.0:420"
 
     # Bind this port for the sprayer component, this should be on your local network
-    bind_pvt = "172.20.1.91:6666"
+    bind_pvt = "0.0.0.0:6666"
 
     # How many threads to occupy with running sprayer
     spray_workers = 8
@@ -967,15 +967,15 @@ root_workdir = "./datastore/pool"
     input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann25.pktminers.cash"
+    public_url = "http://ann25.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
     # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-    bind_pub = "172.20.1.92:80"
+    bind_pub = "0.0.0.0:420"
 
     # Bind this port for the sprayer component, this should be on your local network
-    bind_pvt = "172.20.1.92:6666"
+    bind_pvt = "0.0.0.0:6666"
 
     # How many threads to occupy with running sprayer
     spray_workers = 8
@@ -1006,15 +1006,15 @@ root_workdir = "./datastore/pool"
     input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann26.pktminers.cash"
+    public_url = "http://ann26.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
     # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-    bind_pub = "172.20.1.93:80"
+    bind_pub = "0.0.0.0:420"
 
     # Bind this port for the sprayer component, this should be on your local network
-    bind_pvt = "172.20.1.93:6666"
+    bind_pvt = "0.0.0.0:6666"
 
     # How many threads to occupy with running sprayer
     spray_workers = 8
@@ -1045,15 +1045,15 @@ root_workdir = "./datastore/pool"
     input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann27.pktminers.cash"
+    public_url = "http://ann27.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
     # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-    bind_pub = "172.20.1.94:80"
+    bind_pub = "0.0.0.0:420"
 
     # Bind this port for the sprayer component, this should be on your local network
-    bind_pvt = "172.20.1.94:6666"
+    bind_pvt = "0.0.0.0:6666"
 
     # How many threads to occupy with running sprayer
     spray_workers = 8
@@ -1084,15 +1084,15 @@ root_workdir = "./datastore/pool"
     input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann28.pktminers.cash"
+    public_url = "http://ann28.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
     # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-    bind_pub = "172.20.1.95:80"
+    bind_pub = "0.0.0.0:420"
 
     # Bind this port for the sprayer component, this should be on your local network
-    bind_pvt = "172.20.1.95:6666"
+    bind_pvt = "0.0.0.0:6666"
 
     # How many threads to occupy with running sprayer
     spray_workers = 8
@@ -1123,15 +1123,15 @@ root_workdir = "./datastore/pool"
     input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann29.pktminers.cash"
+    public_url = "http://ann29.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
     # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-    bind_pub = "172.20.1.96:80"
+    bind_pub = "0.0.0.0:420"
 
     # Bind this port for the sprayer component, this should be on your local network
-    bind_pvt = "172.20.1.96:6666"
+    bind_pvt = "0.0.0.0:6666"
 
     # How many threads to occupy with running sprayer
     spray_workers = 8
@@ -1162,15 +1162,15 @@ root_workdir = "./datastore/pool"
     input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann30.pktminers.cash"
+    public_url = "http://ann30.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
     # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-    bind_pub = "172.20.1.97:80"
+    bind_pub = "0.0.0.0:420"
 
     # Bind this port for the sprayer component, this should be on your local network
-    bind_pvt = "172.20.1.97:6666"
+    bind_pvt = "0.0.0.0:6666"
 
     # How many threads to occupy with running sprayer
     spray_workers = 8
@@ -1202,15 +1202,15 @@ root_workdir = "./datastore/pool"
     input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann31.pktminers.cash"
+    public_url = "http://ann31.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
     # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-    bind_pub = "172.20.1.98:80"
+    bind_pub = "0.0.0.0:420"
 
     # Bind this port for the sprayer component, this should be on your local network
-    bind_pvt = "172.20.1.98:6666"
+    bind_pvt = "0.0.0.0:6666"
 
     # How many threads to occupy with running sprayer
     spray_workers = 8
@@ -1241,15 +1241,15 @@ root_workdir = "./datastore/pool"
     input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann32.pktminers.cash"
+    public_url = "http://ann32.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
     # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-    bind_pub = "172.20.1.99:80"
+    bind_pub = "0.0.0.0:420"
 
     # Bind this port for the sprayer component, this should be on your local network
-    bind_pvt = "172.20.1.99:6666"
+    bind_pvt = "0.0.0.0:6666"
 
     # How many threads to occupy with running sprayer
     spray_workers = 8
@@ -1280,15 +1280,15 @@ root_workdir = "./datastore/pool"
     input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann33.pktminers.cash"
+    public_url = "http://ann33.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
     # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-    bind_pub = "172.20.1.100:80"
+    bind_pub = "0.0.0.0:420"
 
     # Bind this port for the sprayer component, this should be on your local network
-    bind_pvt = "172.20.1.1004:6666"
+    bind_pvt = "0.0.0.0:6666"
 
     # How many threads to occupy with running sprayer
     spray_workers = 8
@@ -1319,15 +1319,15 @@ root_workdir = "./datastore/pool"
     input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann34.pktminers.cash"
+    public_url = "http://ann34.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
     # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-    bind_pub = "172.20.1.101:80"
+    bind_pub = "0.0.0.0:420"
 
     # Bind this port for the sprayer component, this should be on your local network
-    bind_pvt = "172.20.1.101:6666"
+    bind_pvt = "0.0.0.0:6666"
 
     # How many threads to occupy with running sprayer
     spray_workers = 8
@@ -1358,15 +1358,15 @@ root_workdir = "./datastore/pool"
     input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann35.pktminers.cash"
+    public_url = "http://ann35.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
     # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-    bind_pub = "172.20.1.102:80"
+    bind_pub = "0.0.0.0:420"
 
     # Bind this port for the sprayer component, this should be on your local network
-    bind_pvt = "172.20.1.102:6666"
+    bind_pvt = "0.0.0.0:6666"
 
     # How many threads to occupy with running sprayer
     spray_workers = 8
@@ -1397,15 +1397,15 @@ root_workdir = "./datastore/pool"
     input_queue_len = 256
 
     # The public URL of this ann handler
-    public_url = "http://ann36.pktminers.cash"
+    public_url = "http://ann36.pktminers.cash:8201/submit"
 
     # Bind to this port
     # NOTE: To bind low ports with non-root user:
     # sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)
-    bind_pub = "172.20.1.103:80"
+    bind_pub = "0.0.0.0:420"
 
     # Bind this port for the sprayer component, this should be on your local network
-    bind_pvt = "172.20.1.103:6666"
+    bind_pvt = "0.0.0.0:6666"
 
     # How many threads to occupy with running sprayer
     spray_workers = 8
