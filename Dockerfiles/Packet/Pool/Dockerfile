@@ -4,7 +4,7 @@ FROM ubuntu:latest
 RUN DEBIAN_FRONTEND="noninteractive" apt-get update
 RUN DEBIAN_FRONTEND="noninteractive" apt-get install -y curl
 
-RUN DEBIAN_FRONTEND="noninteractive" apt-get add-apt-repository ppa:longsleep/golang-backports
+#RUN DEBIAN_FRONTEND="noninteractive" apt-get add-apt-repository ppa:longsleep/golang-backports
 RUN DEBIAN_FRONTEND="noninteractive" apt install -y golang-go
 
 RUN DEBIAN_FRONTEND="noninteractive" apt install -y git
