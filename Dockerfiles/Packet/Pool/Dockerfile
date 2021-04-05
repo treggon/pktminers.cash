@@ -19,7 +19,7 @@ RUN DEBIAN_FRONTEND="noninteractive" apt install -y net-tools
 RUN git clone https://github.com/treggon/pktminers.cash
 RUN git clone --branch develop https://github.com/pkt-cash/pktd
 RUN git clone https://github.com/cjdelisle/PacketCrypt
-RUN git clone https://github.com/cjdelisle/packetcrypt_rs
+RUN git clone --branch develop https://github.com/cjdelisle/packetcrypt_rs
 
 # Install PKTD
 WORKDIR /pktd
@@ -53,6 +53,7 @@ RUN DEBIAN_FRONTEND="noninteractive" apt-get install -y cargo
 
 #Setup Rust, Setup Cargo
 WORKDIR /packetcrypt_rs
+RUN curl https://sh.rustup.rs -sSf --no-modify-path none | sh -s
 RUN DEBIAN_FRONTEND="noninteractive" apt-get install -y cargo
 RUN cargo build --release --features jemalloc
 
