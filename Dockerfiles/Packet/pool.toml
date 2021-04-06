@@ -13,7 +13,7 @@ root_workdir = "./datastore/pool"
     # command line using the -P or --handlerpass flag
     # This will help prevent free-loader pools which pull announcements from
     # your handlers but don't remunerate the announcement miners.
-    block_miner_passwd = ""
+    block_miner_passwd = "1ad7165b-3ba2-44f7-9647-89511cdfff74"
 
     # Randomly skip validation of some announcements to reduce CPU effort
     # Set to 0 to check all announcements.
@@ -52,7 +52,7 @@ root_workdir = "./datastore/pool"
     # command line using the -P or --handlerpass flag
     # This will help prevent free-loader pools which pull announcements from
     # your handlers but don't remunerate the announcement miners.
-    block_miner_passwd = ""
+    block_miner_passwd = "1ad7165b-3ba2-44f7-9647-89511cdfff74"
 
     # Randomly skip validation of some announcements to reduce CPU effort
     # Set to 0 to check all announcements.
@@ -91,7 +91,7 @@ root_workdir = "./datastore/pool"
     # command line using the -P or --handlerpass flag
     # This will help prevent free-loader pools which pull announcements from
     # your handlers but don't remunerate the announcement miners.
-    block_miner_passwd = ""
+    block_miner_passwd = "1ad7165b-3ba2-44f7-9647-89511cdfff74"
 
     # Randomly skip validation of some announcements to reduce CPU effort
     # Set to 0 to check all announcements.
@@ -130,7 +130,7 @@ root_workdir = "./datastore/pool"
     # command line using the -P or --handlerpass flag
     # This will help prevent free-loader pools which pull announcements from
     # your handlers but don't remunerate the announcement miners.
-    block_miner_passwd = ""
+    block_miner_passwd = "1ad7165b-3ba2-44f7-9647-89511cdfff74"
 
     # Randomly skip validation of some announcements to reduce CPU effort
     # Set to 0 to check all announcements.
@@ -169,7 +169,7 @@ root_workdir = "./datastore/pool"
     # command line using the -P or --handlerpass flag
     # This will help prevent free-loader pools which pull announcements from
     # your handlers but don't remunerate the announcement miners.
-    block_miner_passwd = ""
+    block_miner_passwd = "1ad7165b-3ba2-44f7-9647-89511cdfff74"
 
     # Randomly skip validation of some announcements to reduce CPU effort
     # Set to 0 to check all announcements.
@@ -208,7 +208,7 @@ root_workdir = "./datastore/pool"
     # command line using the -P or --handlerpass flag
     # This will help prevent free-loader pools which pull announcements from
     # your handlers but don't remunerate the announcement miners.
-    block_miner_passwd = ""
+    block_miner_passwd = "1ad7165b-3ba2-44f7-9647-89511cdfff74"
 
     # Randomly skip validation of some announcements to reduce CPU effort
     # Set to 0 to check all announcements.
@@ -247,7 +247,7 @@ root_workdir = "./datastore/pool"
     # command line using the -P or --handlerpass flag
     # This will help prevent free-loader pools which pull announcements from
     # your handlers but don't remunerate the announcement miners.
-    block_miner_passwd = ""
+    block_miner_passwd = "1ad7165b-3ba2-44f7-9647-89511cdfff74"
 
     # Randomly skip validation of some announcements to reduce CPU effort
     # Set to 0 to check all announcements.
@@ -286,7 +286,7 @@ root_workdir = "./datastore/pool"
     # command line using the -P or --handlerpass flag
     # This will help prevent free-loader pools which pull announcements from
     # your handlers but don't remunerate the announcement miners.
-    block_miner_passwd = ""
+    block_miner_passwd = "1ad7165b-3ba2-44f7-9647-89511cdfff74"
 
     # Randomly skip validation of some announcements to reduce CPU effort
     # Set to 0 to check all announcements.
@@ -325,7 +325,7 @@ root_workdir = "./datastore/pool"
     # command line using the -P or --handlerpass flag
     # This will help prevent free-loader pools which pull announcements from
     # your handlers but don't remunerate the announcement miners.
-    block_miner_passwd = ""
+    block_miner_passwd = "1ad7165b-3ba2-44f7-9647-89511cdfff74"
 
     # Randomly skip validation of some announcements to reduce CPU effort
     # Set to 0 to check all announcements.
@@ -364,7 +364,7 @@ root_workdir = "./datastore/pool"
     # command line using the -P or --handlerpass flag
     # This will help prevent free-loader pools which pull announcements from
     # your handlers but don't remunerate the announcement miners.
-    block_miner_passwd = ""
+    block_miner_passwd = "1ad7165b-3ba2-44f7-9647-89511cdfff74"
 
     # Randomly skip validation of some announcements to reduce CPU effort
     # Set to 0 to check all announcements.
@@ -404,7 +404,7 @@ root_workdir = "./datastore/pool"
     # command line using the -P or --handlerpass flag
     # This will help prevent free-loader pools which pull announcements from
     # your handlers but don't remunerate the announcement miners.
-    block_miner_passwd = ""
+    block_miner_passwd = "1ad7165b-3ba2-44f7-9647-89511cdfff74"
 
     # Randomly skip validation of some announcements to reduce CPU effort
     # Set to 0 to check all announcements.
@@ -443,7 +443,7 @@ root_workdir = "./datastore/pool"
     # command line using the -P or --handlerpass flag
     # This will help prevent free-loader pools which pull announcements from
     # your handlers but don't remunerate the announcement miners.
-    block_miner_passwd = ""
+    block_miner_passwd = "1ad7165b-3ba2-44f7-9647-89511cdfff74"
 
     # Randomly skip validation of some announcements to reduce CPU effort
     # Set to 0 to check all announcements.
@@ -482,7 +482,7 @@ root_workdir = "./datastore/pool"
     # command line using the -P or --handlerpass flag
     # This will help prevent free-loader pools which pull announcements from
     # your handlers but don't remunerate the announcement miners.
-    block_miner_passwd = ""
+    block_miner_passwd = "1ad7165b-3ba2-44f7-9647-89511cdfff74"
 
     # Randomly skip validation of some announcements to reduce CPU effort
     # Set to 0 to check all announcements.
@@ -521,7 +521,7 @@ root_workdir = "./datastore/pool"
     # command line using the -P or --handlerpass flag
     # This will help prevent free-loader pools which pull announcements from
     # your handlers but don't remunerate the announcement miners.
-    block_miner_passwd = ""
+    block_miner_passwd = "1ad7165b-3ba2-44f7-9647-89511cdfff74"
 
     # Randomly skip validation of some announcements to reduce CPU effort
     # Set to 0 to check all announcements.
@@ -560,7 +560,7 @@ root_workdir = "./datastore/pool"
     # command line using the -P or --handlerpass flag
     # This will help prevent free-loader pools which pull announcements from
     # your handlers but don't remunerate the announcement miners.
-    block_miner_passwd = ""
+    block_miner_passwd = "1ad7165b-3ba2-44f7-9647-89511cdfff74"
 
     # Randomly skip validation of some announcements to reduce CPU effort
     # Set to 0 to check all announcements.
@@ -599,7 +599,7 @@ root_workdir = "./datastore/pool"
     # command line using the -P or --handlerpass flag
     # This will help prevent free-loader pools which pull announcements from
     # your handlers but don't remunerate the announcement miners.
-    block_miner_passwd = ""
+    block_miner_passwd = "1ad7165b-3ba2-44f7-9647-89511cdfff74"
 
     # Randomly skip validation of some announcements to reduce CPU effort
     # Set to 0 to check all announcements.
@@ -638,7 +638,7 @@ root_workdir = "./datastore/pool"
     # command line using the -P or --handlerpass flag
     # This will help prevent free-loader pools which pull announcements from
     # your handlers but don't remunerate the announcement miners.
-    block_miner_passwd = ""
+    block_miner_passwd = "1ad7165b-3ba2-44f7-9647-89511cdfff74"
 
     # Randomly skip validation of some announcements to reduce CPU effort
     # Set to 0 to check all announcements.
@@ -677,7 +677,7 @@ root_workdir = "./datastore/pool"
     # command line using the -P or --handlerpass flag
     # This will help prevent free-loader pools which pull announcements from
     # your handlers but don't remunerate the announcement miners.
-    block_miner_passwd = ""
+    block_miner_passwd = "1ad7165b-3ba2-44f7-9647-89511cdfff74"
 
     # Randomly skip validation of some announcements to reduce CPU effort
     # Set to 0 to check all announcements.
@@ -717,7 +717,7 @@ root_workdir = "./datastore/pool"
     # command line using the -P or --handlerpass flag
     # This will help prevent free-loader pools which pull announcements from
     # your handlers but don't remunerate the announcement miners.
-    block_miner_passwd = ""
+    block_miner_passwd = "1ad7165b-3ba2-44f7-9647-89511cdfff74"
 
     # Randomly skip validation of some announcements to reduce CPU effort
     # Set to 0 to check all announcements.
@@ -756,7 +756,7 @@ root_workdir = "./datastore/pool"
     # command line using the -P or --handlerpass flag
     # This will help prevent free-loader pools which pull announcements from
     # your handlers but don't remunerate the announcement miners.
-    block_miner_passwd = ""
+    block_miner_passwd = "1ad7165b-3ba2-44f7-9647-89511cdfff74"
 
     # Randomly skip validation of some announcements to reduce CPU effort
     # Set to 0 to check all announcements.
@@ -796,7 +796,7 @@ root_workdir = "./datastore/pool"
     # command line using the -P or --handlerpass flag
     # This will help prevent free-loader pools which pull announcements from
     # your handlers but don't remunerate the announcement miners.
-    block_miner_passwd = ""
+    block_miner_passwd = "1ad7165b-3ba2-44f7-9647-89511cdfff74"
 
     # Randomly skip validation of some announcements to reduce CPU effort
     # Set to 0 to check all announcements.
@@ -835,7 +835,7 @@ root_workdir = "./datastore/pool"
     # command line using the -P or --handlerpass flag
     # This will help prevent free-loader pools which pull announcements from
     # your handlers but don't remunerate the announcement miners.
-    block_miner_passwd = ""
+    block_miner_passwd = "1ad7165b-3ba2-44f7-9647-89511cdfff74"
 
     # Randomly skip validation of some announcements to reduce CPU effort
     # Set to 0 to check all announcements.
@@ -874,7 +874,7 @@ root_workdir = "./datastore/pool"
     # command line using the -P or --handlerpass flag
     # This will help prevent free-loader pools which pull announcements from
     # your handlers but don't remunerate the announcement miners.
-    block_miner_passwd = ""
+    block_miner_passwd = "1ad7165b-3ba2-44f7-9647-89511cdfff74"
 
     # Randomly skip validation of some announcements to reduce CPU effort
     # Set to 0 to check all announcements.
@@ -913,7 +913,7 @@ root_workdir = "./datastore/pool"
     # command line using the -P or --handlerpass flag
     # This will help prevent free-loader pools which pull announcements from
     # your handlers but don't remunerate the announcement miners.
-    block_miner_passwd = ""
+    block_miner_passwd = "1ad7165b-3ba2-44f7-9647-89511cdfff74"
 
     # Randomly skip validation of some announcements to reduce CPU effort
     # Set to 0 to check all announcements.
@@ -952,7 +952,7 @@ root_workdir = "./datastore/pool"
     # command line using the -P or --handlerpass flag
     # This will help prevent free-loader pools which pull announcements from
     # your handlers but don't remunerate the announcement miners.
-    block_miner_passwd = ""
+    block_miner_passwd = "1ad7165b-3ba2-44f7-9647-89511cdfff74"
 
     # Randomly skip validation of some announcements to reduce CPU effort
     # Set to 0 to check all announcements.
@@ -991,7 +991,7 @@ root_workdir = "./datastore/pool"
     # command line using the -P or --handlerpass flag
     # This will help prevent free-loader pools which pull announcements from
     # your handlers but don't remunerate the announcement miners.
-    block_miner_passwd = ""
+    block_miner_passwd = "1ad7165b-3ba2-44f7-9647-89511cdfff74"
 
     # Randomly skip validation of some announcements to reduce CPU effort
     # Set to 0 to check all announcements.
@@ -1030,7 +1030,7 @@ root_workdir = "./datastore/pool"
     # command line using the -P or --handlerpass flag
     # This will help prevent free-loader pools which pull announcements from
     # your handlers but don't remunerate the announcement miners.
-    block_miner_passwd = ""
+    block_miner_passwd = "1ad7165b-3ba2-44f7-9647-89511cdfff74"
 
     # Randomly skip validation of some announcements to reduce CPU effort
     # Set to 0 to check all announcements.
@@ -1069,7 +1069,7 @@ root_workdir = "./datastore/pool"
     # command line using the -P or --handlerpass flag
     # This will help prevent free-loader pools which pull announcements from
     # your handlers but don't remunerate the announcement miners.
-    block_miner_passwd = ""
+    block_miner_passwd = "1ad7165b-3ba2-44f7-9647-89511cdfff74"
 
     # Randomly skip validation of some announcements to reduce CPU effort
     # Set to 0 to check all announcements.
@@ -1108,7 +1108,7 @@ root_workdir = "./datastore/pool"
     # command line using the -P or --handlerpass flag
     # This will help prevent free-loader pools which pull announcements from
     # your handlers but don't remunerate the announcement miners.
-    block_miner_passwd = ""
+    block_miner_passwd = "1ad7165b-3ba2-44f7-9647-89511cdfff74"
 
     # Randomly skip validation of some announcements to reduce CPU effort
     # Set to 0 to check all announcements.
@@ -1147,7 +1147,7 @@ root_workdir = "./datastore/pool"
     # command line using the -P or --handlerpass flag
     # This will help prevent free-loader pools which pull announcements from
     # your handlers but don't remunerate the announcement miners.
-    block_miner_passwd = ""
+    block_miner_passwd = "1ad7165b-3ba2-44f7-9647-89511cdfff74"
 
     # Randomly skip validation of some announcements to reduce CPU effort
     # Set to 0 to check all announcements.
@@ -1187,7 +1187,7 @@ root_workdir = "./datastore/pool"
     # command line using the -P or --handlerpass flag
     # This will help prevent free-loader pools which pull announcements from
     # your handlers but don't remunerate the announcement miners.
-    block_miner_passwd = ""
+    block_miner_passwd = "1ad7165b-3ba2-44f7-9647-89511cdfff74"
 
     # Randomly skip validation of some announcements to reduce CPU effort
     # Set to 0 to check all announcements.
@@ -1226,7 +1226,7 @@ root_workdir = "./datastore/pool"
     # command line using the -P or --handlerpass flag
     # This will help prevent free-loader pools which pull announcements from
     # your handlers but don't remunerate the announcement miners.
-    block_miner_passwd = ""
+    block_miner_passwd = "1ad7165b-3ba2-44f7-9647-89511cdfff74"
 
     # Randomly skip validation of some announcements to reduce CPU effort
     # Set to 0 to check all announcements.
@@ -1265,7 +1265,7 @@ root_workdir = "./datastore/pool"
     # command line using the -P or --handlerpass flag
     # This will help prevent free-loader pools which pull announcements from
     # your handlers but don't remunerate the announcement miners.
-    block_miner_passwd = ""
+    block_miner_passwd = "1ad7165b-3ba2-44f7-9647-89511cdfff74"
 
     # Randomly skip validation of some announcements to reduce CPU effort
     # Set to 0 to check all announcements.
@@ -1304,7 +1304,7 @@ root_workdir = "./datastore/pool"
     # command line using the -P or --handlerpass flag
     # This will help prevent free-loader pools which pull announcements from
     # your handlers but don't remunerate the announcement miners.
-    block_miner_passwd = ""
+    block_miner_passwd = "1ad7165b-3ba2-44f7-9647-89511cdfff74"
 
     # Randomly skip validation of some announcements to reduce CPU effort
     # Set to 0 to check all announcements.
@@ -1343,7 +1343,7 @@ root_workdir = "./datastore/pool"
     # command line using the -P or --handlerpass flag
     # This will help prevent free-loader pools which pull announcements from
     # your handlers but don't remunerate the announcement miners.
-    block_miner_passwd = ""
+    block_miner_passwd = "1ad7165b-3ba2-44f7-9647-89511cdfff74"
 
     # Randomly skip validation of some announcements to reduce CPU effort
     # Set to 0 to check all announcements.
@@ -1382,7 +1382,7 @@ root_workdir = "./datastore/pool"
     # command line using the -P or --handlerpass flag
     # This will help prevent free-loader pools which pull announcements from
     # your handlers but don't remunerate the announcement miners.
-    block_miner_passwd = ""
+    block_miner_passwd = "1ad7165b-3ba2-44f7-9647-89511cdfff74"
 
     # Randomly skip validation of some announcements to reduce CPU effort
     # Set to 0 to check all announcements.
