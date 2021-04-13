@@ -247,7 +247,7 @@ config.blkHandlers = [
         host: '::',
 
         // Maximum number of simultanious connections to accept before sending 500 errors
-        maxConnections: 144,
+        maxConnections: 288,
 
         root: config
     },
@@ -264,7 +264,7 @@ config.master = {
     // Minimum work for an announcement
     // This number is effectively a bandwidth divisor, every time you
     // double this number you will reduce your bandwidth by a factor of two.
-    annMinWork: Util.annWorkToTarget(128),
+    annMinWork: Util.annWorkToTarget(512),
 
     // Average number of shares per block, reducing this number will reduce
     // load on your block handlers, but increasing it will allow payment
