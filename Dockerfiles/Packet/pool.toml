@@ -20,7 +20,7 @@ root_workdir = "./datastore/pool"
     skip_check_chance = 0.5
 
     # Number of worker threads
-    num_workers = 22
+    num_workers = 35
 
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
@@ -59,7 +59,7 @@ root_workdir = "./datastore/pool"
     skip_check_chance = 0.5
 
     # Number of worker threads
-    num_workers = 22
+    num_workers = 35
 
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
@@ -98,7 +98,7 @@ root_workdir = "./datastore/pool"
     skip_check_chance = 0.5
 
     # Number of worker threads
-    num_workers = 22
+    num_workers = 35
 
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
@@ -137,7 +137,7 @@ root_workdir = "./datastore/pool"
     skip_check_chance = 0.5
 
     # Number of worker threads
-    num_workers = 22
+    num_workers = 35
 
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
@@ -176,7 +176,7 @@ root_workdir = "./datastore/pool"
     skip_check_chance = 0.5
 
     # Number of worker threads
-    num_workers = 22
+    num_workers = 35
 
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
@@ -215,7 +215,7 @@ root_workdir = "./datastore/pool"
     skip_check_chance = 0.5
 
     # Number of worker threads
-    num_workers = 22
+    num_workers = 35
 
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
@@ -254,7 +254,7 @@ root_workdir = "./datastore/pool"
     skip_check_chance = 0.5
 
     # Number of worker threads
-    num_workers = 22
+    num_workers = 35
 
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
@@ -293,7 +293,7 @@ root_workdir = "./datastore/pool"
     skip_check_chance = 0.5
 
     # Number of worker threads
-    num_workers = 22
+    num_workers = 35
 
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
@@ -332,7 +332,7 @@ root_workdir = "./datastore/pool"
     skip_check_chance = 0.5
 
     # Number of worker threads
-    num_workers = 22
+    num_workers = 35
 
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
@@ -371,7 +371,7 @@ root_workdir = "./datastore/pool"
     skip_check_chance = 0.5
 
     # Number of worker threads
-    num_workers = 22
+    num_workers = 35
 
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
@@ -411,7 +411,7 @@ root_workdir = "./datastore/pool"
     skip_check_chance = 0.5
 
     # Number of worker threads
-    num_workers = 22
+    num_workers = 35
 
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
@@ -450,7 +450,7 @@ root_workdir = "./datastore/pool"
     skip_check_chance = 0.5
 
     # Number of worker threads
-    num_workers = 22
+    num_workers = 35
 
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
@@ -489,7 +489,7 @@ root_workdir = "./datastore/pool"
     skip_check_chance = 0.5
 
     # Number of worker threads
-    num_workers = 22
+    num_workers = 35
 
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
@@ -528,7 +528,7 @@ root_workdir = "./datastore/pool"
     skip_check_chance = 0.5
 
     # Number of worker threads
-    num_workers = 22
+    num_workers = 35
 
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
@@ -567,7 +567,7 @@ root_workdir = "./datastore/pool"
     skip_check_chance = 0.5
 
     # Number of worker threads
-    num_workers = 22
+    num_workers = 35
 
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
@@ -606,7 +606,7 @@ root_workdir = "./datastore/pool"
     skip_check_chance = 0.5
 
     # Number of worker threads
-    num_workers = 22
+    num_workers = 35
 
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
@@ -645,7 +645,7 @@ root_workdir = "./datastore/pool"
     skip_check_chance = 0.5
 
     # Number of worker threads
-    num_workers = 22
+    num_workers = 35
 
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
@@ -684,7 +684,7 @@ root_workdir = "./datastore/pool"
     skip_check_chance = 0.5
 
     # Number of worker threads
-    num_workers = 22
+    num_workers = 35
 
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
@@ -724,7 +724,7 @@ root_workdir = "./datastore/pool"
     skip_check_chance = 0.5
 
     # Number of worker threads
-    num_workers = 22
+    num_workers = 35
 
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
@@ -763,7 +763,7 @@ root_workdir = "./datastore/pool"
     skip_check_chance = 0.5
 
     # Number of worker threads
-    num_workers = 22
+    num_workers = 35
 
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
@@ -803,7 +803,7 @@ root_workdir = "./datastore/pool"
     skip_check_chance = 0.5
 
     # Number of worker threads
-    num_workers = 22
+    num_workers = 35
 
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
@@ -842,7 +842,7 @@ root_workdir = "./datastore/pool"
     skip_check_chance = 0.5
 
     # Number of worker threads
-    num_workers = 22
+    num_workers = 35
 
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
@@ -881,7 +881,7 @@ root_workdir = "./datastore/pool"
     skip_check_chance = 0.5
 
     # Number of worker threads
-    num_workers = 22
+    num_workers = 35
 
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
@@ -920,7 +920,7 @@ root_workdir = "./datastore/pool"
     skip_check_chance = 0.5
 
     # Number of worker threads
-    num_workers = 22
+    num_workers = 35
 
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
@@ -959,7 +959,7 @@ root_workdir = "./datastore/pool"
     skip_check_chance = 0.5
 
     # Number of worker threads
-    num_workers = 22
+    num_workers = 35
 
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
@@ -998,7 +998,7 @@ root_workdir = "./datastore/pool"
     skip_check_chance = 0.5
 
     # Number of worker threads
-    num_workers = 22
+    num_workers = 35
 
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
@@ -1037,7 +1037,7 @@ root_workdir = "./datastore/pool"
     skip_check_chance = 0.5
 
     # Number of worker threads
-    num_workers = 22
+    num_workers = 35
 
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
@@ -1076,7 +1076,7 @@ root_workdir = "./datastore/pool"
     skip_check_chance = 0.5
 
     # Number of worker threads
-    num_workers = 22
+    num_workers = 35
 
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
@@ -1115,7 +1115,7 @@ root_workdir = "./datastore/pool"
     skip_check_chance = 0.5
 
     # Number of worker threads
-    num_workers = 22
+    num_workers = 35
 
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
@@ -1154,7 +1154,7 @@ root_workdir = "./datastore/pool"
     skip_check_chance = 0.5
 
     # Number of worker threads
-    num_workers = 22
+    num_workers = 35
 
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
@@ -1194,7 +1194,7 @@ root_workdir = "./datastore/pool"
     skip_check_chance = 0.5
 
     # Number of worker threads
-    num_workers = 22
+    num_workers = 35
 
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
@@ -1233,7 +1233,7 @@ root_workdir = "./datastore/pool"
     skip_check_chance = 0.5
 
     # Number of worker threads
-    num_workers = 22
+    num_workers = 35
 
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
@@ -1272,7 +1272,7 @@ root_workdir = "./datastore/pool"
     skip_check_chance = 0.5
 
     # Number of worker threads
-    num_workers = 22
+    num_workers = 35
 
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
@@ -1311,7 +1311,7 @@ root_workdir = "./datastore/pool"
     skip_check_chance = 0.5
 
     # Number of worker threads
-    num_workers = 22
+    num_workers = 35
 
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
@@ -1350,7 +1350,7 @@ root_workdir = "./datastore/pool"
     skip_check_chance = 0.5
 
     # Number of worker threads
-    num_workers = 22
+    num_workers = 35
 
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
@@ -1389,7 +1389,7 @@ root_workdir = "./datastore/pool"
     skip_check_chance = 0.5
 
     # Number of worker threads
-    num_workers = 22
+    num_workers = 35
 
     # Length of the input queue, keeping this low will create back-pressure
     # and prevent miners from posting too many announcements when the server
